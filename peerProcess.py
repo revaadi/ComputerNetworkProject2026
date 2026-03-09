@@ -1,6 +1,6 @@
 import sys
 import math
-
+import socket
 def parse_common_config(filepath):
     config = {}
     try:
@@ -62,3 +62,23 @@ if __name__ == "__main__":
     print("\nInitialization Complete")
     print(f"My Info: {my_info}")
     
+    #making the socket
+    server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    server_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+    server_socket.bind((my_info['host'], my_info['port']))
+    server_socket.listen()
+    print(f"Peer {my_peer_id} is running on port {my_info['port']}...")
+
+    # connect to earlier peers
+    for peer_id, info in peer_info.items():
+        if peer_id < my_peer_id:
+            try:
+                client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+                client_socket.connect((info['host'], info['port']))
+                print(f"Peer {my_peer_id} connected to peer {peer_id}")
+            except Exception as e:
+                print(f"the connection has failed to peer {peer_id}: {e}")
+
+    while True:
+        conn, addr = server_socket.accept()
+        print(f"Peer {my_peer_id} connected from {addr}")
