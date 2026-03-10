@@ -1,84 +1,154 @@
 import sys
-import math
 import socket
-def parse_common_config(filepath):
-    config = {}
-    try:
-        with open(filepath, 'r') as file:
-            for line in file:
-                parts = line.strip().split()
-                if len(parts) == 2:
-                    key = parts[0]
-                    value = parts[1]
-                    
-                    if value.isdigit():
-                        config[key] = int(value)
-                    else:
-                        config[key] = value
-                        
-        if 'FileSize' in config and 'PieceSize' in config:
-            config['num_pieces'] = math.ceil(config['FileSize'] / config['PieceSize'])
-            
-        return config
-    except FileNotFoundError:
-        print(f"Error: File not found")
-        return None
+import math
+import threading
+import time
+from message import ProtocolMessage
 
-def parse_peer_info(filepath):
-    peers = {}
-    try:
-        with open(filepath, 'r') as file:
-            for line in file:
-                parts = line.strip().split()
-                if len(parts) == 4:
-                    peer_id = int(parts[0])
-                    peers[peer_id] = {
-                        'host': parts[1],
-                        'port': int(parts[2]),
-                        'has_file': int(parts[3]) == 1 
-                    }
-        return peers
-    except FileNotFoundError:
-        print(f"Error: File not found")
-        return None
 
-if __name__ == "__main__":
-    if len(sys.argv) != 2:
-        print("Incorrect arguments")
-        sys.exit(1)
+def load_common_config(file_path):
+    settings = {}
+    with open(file_path, 'r') as cfg:
+        for line in cfg:
+            parts = line.strip().split()
+            if len(parts) == 2:
+                key, value = parts
+                settings[key] = int(value) if value.isdigit() else value
 
-    my_peer_id = int(sys.argv[1])
-    print(f"Starting Peer {my_peer_id}...")
+    if "FileSize" in settings and "PieceSize" in settings:
+        settings["TotalPieces"] = math.ceil(settings["FileSize"] / settings["PieceSize"])
 
-    common_cfg = parse_common_config('Common.cfg')
-    peer_info = parse_peer_info('PeerInfo.cfg')
+    return settings
 
-    if my_peer_id not in peer_info:
-        print(f"Error: Peer {my_peer_id} not found in PeerInfo.cfg")
-        sys.exit(1)
 
-    my_info = peer_info[my_peer_id]
-    
-    print("\nInitialization Complete")
-    print(f"My Info: {my_info}")
-    
-    #making the socket
-    server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    server_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
-    server_socket.bind((my_info['host'], my_info['port']))
-    server_socket.listen()
-    print(f"Peer {my_peer_id} is running on port {my_info['port']}...")
+def load_peer_info(file_path):
+    peer_map = {}
+    with open(file_path, 'r') as f:
+        for line in f:
+            parts = line.strip().split()
+            if len(parts) == 4:
+                pid = int(parts[0])
+                peer_map[pid] = {
+                    "host": parts[1],
+                    "port": int(parts[2]),
+                    "file": int(parts[3]) == 1
+                }
+    return peer_map
 
-    # connect to earlier peers
-    for peer_id, info in peer_info.items():
-        if peer_id < my_peer_id:
-            try:
-                client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-                client_socket.connect((info['host'], info['port']))
-                print(f"Peer {my_peer_id} connected to peer {peer_id}")
-            except Exception as e:
-                print(f"the connection has failed to peer {peer_id}: {e}")
+
+def handle_connection(connection, my_id):
+    handshake = connection.recv(32)
+    parsed = ProtocolMessage.decode_handshake(handshake)
+
+    if parsed is None:
+        connection.close()
+        return
+
+    header, peer_id = parsed
+    print(f"Peer {my_id} received handshake from Peer {peer_id}")
+    reply = ProtocolMessage.make_handshake(my_id)
+    connection.sendall(reply)
+
+    connection.sendall(ProtocolMessage.have(0))
 
     while True:
-        conn, addr = server_socket.accept()
-        print(f"Peer {my_peer_id} connected from {addr}")
+        try:
+            data = connection.recv(4096)
+            if not data:
+                break
+
+            msg_type, payload = ProtocolMessage.parse_packet(data)
+
+            if msg_type == ProtocolMessage.TYPE_CHOKE:
+                print(f"Peer {peer_id} choked connection")
+
+            elif msg_type == ProtocolMessage.TYPE_UNCHOKE:
+                print(f"Peer {peer_id} unchoked connection")
+
+            elif msg_type == ProtocolMessage.TYPE_INTERESTED:
+                print(f"Peer {peer_id} is interested")
+
+            elif msg_type == ProtocolMessage.TYPE_NOT_INTERESTED:
+                print(f"Peer {peer_id} not interested")
+
+            elif msg_type == ProtocolMessage.TYPE_HAVE:
+                piece = int.from_bytes(payload, byteorder="big")
+                print(f"Peer {peer_id} has piece {piece}")
+
+            elif msg_type == ProtocolMessage.TYPE_REQUEST:
+                piece = int.from_bytes(payload, byteorder="big")
+                print(f"Peer {peer_id} requested piece {piece}")
+
+        except:
+            break
+
+    connection.close()
+
+
+def start_server(my_id, host, port):
+    server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    server.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+    server.bind((host, port))
+    server.listen()
+    print(f"Peer {my_id} listening on {port}")
+
+    while True:
+        conn, addr = server.accept()
+        thread = threading.Thread(target=handle_connection, args=(conn, my_id))
+        thread.start()
+
+
+def connect_to_previous_peers(my_id, peer_data):
+    for pid in peer_data:
+        if pid < my_id:
+            try:
+                peer = peer_data[pid]
+                sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+                sock.connect((peer["host"], peer["port"]))
+
+                handshake = ProtocolMessage.make_handshake(my_id)
+                sock.sendall(handshake)
+
+                response = sock.recv(32)
+                parsed = ProtocolMessage.decode_handshake(response)
+                if parsed:
+                    header, peer_id = parsed
+                    print(f"Peer {my_id} received handshake reply from Peer {peer_id}")
+
+                thread = threading.Thread(target=handle_connection, args=(sock, my_id))
+                thread.start()
+
+                print(f"Connected to peer {pid}")
+
+            except:
+                print(f"Failed connection to peer {pid}")
+
+
+if __name__ == "__main__":
+
+    if len(sys.argv) != 2:
+        print("Usage: python peerProcess.py <peerID>")
+        sys.exit()
+
+    my_peer_id = int(sys.argv[1])
+
+    common = load_common_config("Common.cfg")
+    peers = load_peer_info("PeerInfo.cfg")
+
+    if my_peer_id not in peers:
+        print("Peer not defined in config")
+        sys.exit()
+
+    my_info = peers[my_peer_id]
+
+    server_thread = threading.Thread(
+        target=start_server,
+        args=(my_peer_id, my_info["host"], my_info["port"]),
+        daemon=True
+    )
+    server_thread.start()
+
+    time.sleep(0.5)
+    connect_to_previous_peers(my_peer_id, peers)
+
+    server_thread.join()
