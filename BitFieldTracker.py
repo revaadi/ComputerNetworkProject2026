@@ -49,3 +49,47 @@ class BitFieldTracker:
 
     def bitfieldPayload(self):
         return bytes(self.bitfield)
+    
+    def missing_pieces(self):
+        missing = []
+        for i in range(self.total_pieces):
+            if self.bitfield[i] == 0:
+                missing.append(i)
+        return missing
+
+    def owned_pieces(self):
+        owned = []
+        for i in range(self.total_pieces):
+            if self.bitfield[i] == 1:
+                owned.append(i)
+        return owned
+
+    def has_any_pieces(self):
+        return self.totalAmount() > 0
+
+    def clear_requested(self, piece_index):
+        if piece_index in self.requested_pieces:
+            self.requested_pieces.remove(piece_index)
+
+    def interested_in(self, neighbor_bitfield):
+        for i in range(self.total_pieces):
+            if neighbor_bitfield[i] == 1 and self.bitfield[i] == 0:
+                return True
+        return False
+    
+    def count_owned(self):
+        return sum(self.bitfield)
+
+    def count_missing(self):
+        return self.total_pieces - sum(self.bitfield)
+
+    def is_piece_requested(self, piece_index):
+        return piece_index in self.requested_pieces
+
+    def mark_piece_missing(self, piece_index):
+        self.bitfield[piece_index] = 0
+        if piece_index in self.requested_pieces:
+            self.requested_pieces.remove(piece_index)
+
+    def reset_requested_pieces(self):
+        self.requested_pieces.clear()
