@@ -24,6 +24,9 @@ class ProtocolMessage:
         if len(raw_data) != 32:
             return None
 
+        if raw_data[:18] != ProtocolMessage.HANDSHAKE_HEADER:
+            return None
+
         header = raw_data[:18]
         peer = struct.unpack(">I", raw_data[28:])[0]
 
@@ -79,3 +82,15 @@ class ProtocolMessage:
         payload = data[5:5 + msg_len - 1]
 
         return msg_type, payload
+    
+    @staticmethod
+    def valid_handshake_header(raw_data):
+        if len(raw_data) != 32:
+            return False
+        return raw_data[:18] == ProtocolMessage.HANDSHAKE_HEADER
+
+    @staticmethod
+    def extract_peer_id(raw_data):
+        if len(raw_data) != 32:
+            return None
+        return struct.unpack(">I", raw_data[28:])[0]
