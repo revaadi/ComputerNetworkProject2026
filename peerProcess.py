@@ -108,6 +108,17 @@ def write_piece_to_file(peer_id, piece_index, data, filename, piece_size):
         f.seek(offset)
         f.write(data)
 
+def all_peers_complete(tracker, conn_manager):
+    if not tracker.file_complete():
+        return False
+
+    with conn_manager.lock:
+        for state in conn_manager.peers.values():
+            if not state.get("neighbor_complete", False):
+                return False
+
+    return True
+
 def send_have_to_all(piece_index, peer_connections):
     for conn in peer_connections:
         try:
@@ -192,6 +203,11 @@ def handle_connection(connection, my_id, tracker, logger, common, conn_manager, 
                     neighbor_bitfield = [0] * common["TotalPieces"]
                     
                 neighbor_bitfield[piece_index] = 1
+                # If neighbor now has all pieces, mark them complete
+                if all(neighbor_bitfield):
+                    with conn_manager.lock:
+                        if peer_id in conn_manager.peers:
+                            conn_manager.peers[peer_id]["neighbor_complete"] = True
                 
                 if tracker.interested_in(neighbor_bitfield):
                     connection.sendall(ProtocolMessage.interested())
@@ -226,6 +242,10 @@ def handle_connection(connection, my_id, tracker, logger, common, conn_manager, 
 
                 if tracker.file_complete():
                     logger.info(f"Peer {my_id} has downloaded the complete file.")
+
+                    if all_peers_complete(tracker, conn_manager):
+                        logger.info(f"Peer {my_id} is terminating as all peers have completed.")
+                        os._exit(0)
 
                 if neighbor_bitfield is not None:
                     if tracker.interested_in(neighbor_bitfield):
@@ -294,6 +314,10 @@ def preferred_neighbors_timer(my_id, common, conn_manager, logger, tracker):
                             state["connection"].sendall(ProtocolMessage.choke())
                         except Exception:
                             pass
+        # NEW: Check global completion periodically
+        if all_peers_complete(tracker, conn_manager):
+            logger.info(f"Peer {my_id} is terminating as all peers have completed.")
+            os._exit(0)
 
 def optimistic_unchoking_timer(my_id, common, conn_manager, logger):
     interval = common["OptimisticUnchokingInterval"]
