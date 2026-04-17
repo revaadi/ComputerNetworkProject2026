@@ -12,7 +12,8 @@ class ConnectionManager:
                 "choked_by_me": True,
                 "choking_me": True,
                 "interested_in_me": False,
-                "download_bytes": 0
+                "download_bytes": 0,
+                "neighbor_complete": False 
             }
 
     def remove_connection(self, peer_id):
