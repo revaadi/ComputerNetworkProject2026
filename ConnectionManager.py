@@ -1,4 +1,14 @@
 import threading
+from enum import Enum
+
+class PeerState(Enum):
+    CONNECTING = "CONNECTING"
+    HANDSHAKING = "HANDSHAKING"
+    CONNECTED = "CONNECTED"
+    CHOKED = "CHOKED"
+    UNCHOKED = "UNCHOKED"
+    COMPLETED = "COMPLETED"
+    DISCONNECTED = "DISCONNECTED"
 
 class ConnectionManager:
     def __init__(self):
@@ -9,11 +19,12 @@ class ConnectionManager:
         with self.lock:
             self.peers[peer_id] = {
                 "connection": connection,
+                "state": PeerState.CONNECTED,
                 "choked_by_me": True,
                 "choking_me": True,
                 "interested_in_me": False,
                 "download_bytes": 0,
-                "neighbor_complete": False 
+                "neighbor_complete": False
             }
 
     def remove_connection(self, peer_id):
@@ -59,3 +70,25 @@ class ConnectionManager:
                 rates[peer_id] = state["download_bytes"]
                 state["download_bytes"] = 0
         return rates
+    
+    def set_state(self, peer_id, new_state):
+        with self.lock:
+            if peer_id in self.peers:
+                self.peers[peer_id]["state"] = new_state
+
+    def get_state(self, peer_id):
+        with self.lock:
+            if peer_id in self.peers:
+                return self.peers[peer_id]["state"]
+            return None
+
+    def mark_completed(self, peer_id):
+        with self.lock:
+            if peer_id in self.peers:
+                self.peers[peer_id]["neighbor_complete"] = True
+                self.peers[peer_id]["state"] = PeerState.COMPLETED
+
+    def mark_disconnected(self, peer_id):
+        with self.lock:
+            if peer_id in self.peers:
+                self.peers[peer_id]["state"] = PeerState.DISCONNECTED
