@@ -6,8 +6,10 @@ import time
 import logging
 import struct
 import os
+import random
 from message import ProtocolMessage
 from BitFieldTracker import BitFieldTracker
+from ConnectionManager import ConnectionManager
 
 def setup_logger(peer_id):
     log_filename = f"log_peer_{peer_id}.log"
@@ -113,7 +115,7 @@ def send_have_to_all(piece_index, peer_connections):
         except Exception:
             pass
 
-def handle_connection(connection, my_id, tracker, logger, common, connected_peer_id=None, handshake_done=False):
+def handle_connection(connection, my_id, tracker, logger, common, conn_manager, connected_peer_id=None, handshake_done=False):
     if not handshake_done:
         handshake = connection.recv(32)
         parsed = ProtocolMessage.decode_handshake(handshake)
@@ -129,6 +131,8 @@ def handle_connection(connection, my_id, tracker, logger, common, connected_peer
         connection.sendall(reply)
     else:
         peer_id = connected_peer_id
+
+    conn_manager.add_connection(peer_id, connection)
 
     if tracker.totalAmount() > 0:
         connection.sendall(ProtocolMessage.bitfield(tracker.bitfieldPayload()))
@@ -151,9 +155,11 @@ def handle_connection(connection, my_id, tracker, logger, common, connected_peer
             payload = msg_body[1:]
 
             if msg_type == ProtocolMessage.TYPE_CHOKE:
+                conn_manager.set_choking_me(peer_id, True)
                 logger.info(f"Peer {my_id} is choked by {peer_id}.")
 
             elif msg_type == ProtocolMessage.TYPE_UNCHOKE:
+                conn_manager.set_choking_me(peer_id, False)
                 logger.info(f"Peer {my_id} is unchoked by {peer_id}.")
                 if neighbor_bitfield is not None:
                     piece = tracker.pick_from_neighbor(neighbor_bitfield)
@@ -163,87 +169,84 @@ def handle_connection(connection, my_id, tracker, logger, common, connected_peer
                         connection.sendall(ProtocolMessage.request(piece))
 
             elif msg_type == ProtocolMessage.TYPE_INTERESTED:
+                conn_manager.set_interested_in_me(peer_id, True)
                 logger.info(f"Peer {my_id} received the 'interested' message from {peer_id}.")
 
             elif msg_type == ProtocolMessage.TYPE_NOT_INTERESTED:
+                conn_manager.set_interested_in_me(peer_id, False)
                 logger.info(f"Peer {my_id} received the 'not interested' message from {peer_id}.")
 
             elif msg_type == ProtocolMessage.TYPE_BITFIELD:
                 neighbor_bitfield = list(payload)
-
-                piece = tracker.pick_from_neighbor(neighbor_bitfield)
-
-                if piece is not None:
+                
+                if tracker.interested_in(neighbor_bitfield):
                     connection.sendall(ProtocolMessage.interested())
                 else:
                     connection.sendall(ProtocolMessage.not_interested())
 
-
             elif msg_type == ProtocolMessage.TYPE_HAVE:
-                piece = int.from_bytes(payload, byteorder="big")
-                logger.info(f"Peer {my_id} received the 'have' message from {peer_id} for the piece {piece}.")
+                piece_index = int.from_bytes(payload, byteorder="big")
+                logger.info(f"Peer {my_id} received the 'have' message from {peer_id} for the piece {piece_index}.")
                 
                 if neighbor_bitfield is None:
-                    neighbor_bitfield = [0] * tracker.total_pieces
-
-                if 0 <= piece < len(neighbor_bitfield):
-                    neighbor_bitfield[piece] = 1
-
+                    neighbor_bitfield = [0] * common["TotalPieces"]
+                    
+                neighbor_bitfield[piece_index] = 1
+                
                 if tracker.interested_in(neighbor_bitfield):
                     connection.sendall(ProtocolMessage.interested())
                 else:
                     connection.sendall(ProtocolMessage.not_interested())
 
             elif msg_type == ProtocolMessage.TYPE_REQUEST:
-                piece = int.from_bytes(payload, byteorder="big")
-
-                if tracker.piece_owned(piece):
-                    piece_data = read_piece_from_file(
-                        my_id,
-                        piece,
-                        common["FileName"],
-                        common["PieceSize"],
-                        common["FileSize"],
-                        common["TotalPieces"]
-                    )
-                    connection.sendall(ProtocolMessage.piece(piece, piece_data))
-            
+                piece_index = int.from_bytes(payload, byteorder="big")
+                piece_data = read_piece_from_file(
+                    my_id, 
+                    piece_index, 
+                    common["FileName"], 
+                    common["PieceSize"], 
+                    common["FileSize"], 
+                    common["TotalPieces"]
+                )
+                connection.sendall(ProtocolMessage.piece(piece_index, piece_data))
+                                
             elif msg_type == ProtocolMessage.TYPE_PIECE:
                 piece = int.from_bytes(payload[:4], byteorder="big")
                 piece_data = payload[4:]
+                
+                conn_manager.record_download(peer_id, len(payload))
 
-                write_piece_to_file(
-                    my_id,
-                    piece,
-                    piece_data,
-                    common["FileName"],
-                    common["PieceSize"]
-                )
-
+                write_piece_to_file(my_id, piece, piece_data, common["FileName"], common["PieceSize"])
                 tracker.add_received(piece)
 
-                logger.info(
-                    f"Peer {my_id} has downloaded the piece {piece} from {peer_id}. "
-                    f"Now the number of pieces it has is {tracker.totalAmount()}."
-                )
+                logger.info(f"Peer {my_id} has downloaded the piece {piece} from {peer_id}. "
+                            f"Now the number of pieces it has is {tracker.totalAmount()}.")
+                
+                conn_manager.broadcast(ProtocolMessage.have(piece))
 
                 if tracker.file_complete():
                     logger.info(f"Peer {my_id} has downloaded the complete file.")
 
                 if neighbor_bitfield is not None:
-                    next_piece = tracker.pick_from_neighbor(neighbor_bitfield)
+                    if tracker.interested_in(neighbor_bitfield):
+                        next_piece = tracker.pick_from_neighbor(neighbor_bitfield)
+                        if next_piece is not None:
+                            tracker.add_requested(next_piece)
+                            connection.sendall(ProtocolMessage.request(next_piece))
+                    else:
+                        connection.sendall(ProtocolMessage.not_interested())
 
-                    if next_piece is not None:
-                        tracker.add_requested(next_piece)
-                        connection.sendall(ProtocolMessage.request(next_piece))
-
-        except Exception:
+        except Exception as e:
+            import traceback
+            logger.error(f"Error in handle_connection with {peer_id}: {e}")
+            traceback.print_exc()
             break
 
+    conn_manager.remove_connection(peer_id)
     connection.close()
 
 
-def start_server(my_id, host, port, tracker, logger, common):
+def start_server(my_id, host, port, tracker, logger, common, conn_manager):
     server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     server.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
     server.bind((host, port))
@@ -252,10 +255,48 @@ def start_server(my_id, host, port, tracker, logger, common):
 
     while True:
         conn, addr = server.accept()
-        thread = threading.Thread(target=handle_connection, args=(conn, my_id, tracker, logger, common, None, False))
+        thread = threading.Thread(target=handle_connection, args=(conn, my_id, tracker, logger, common, conn_manager, None, False))
         thread.start()
 
-def connect_to_previous_peers(my_id, peer_data, tracker, logger, common):
+
+def preferred_neighbors_timer(my_id, common, conn_manager, logger, tracker):
+    k = common["NumberOfPreferredNeighbors"]
+    interval = common["UnchokingInterval"]
+    
+    while True:
+        time.sleep(interval)
+        rates = conn_manager.get_and_reset_download_rates()
+        interested_peers = conn_manager.get_interested_peers()
+        random.shuffle(interested_peers)
+        
+        if not tracker.file_complete():
+            interested_peers.sort(key=lambda pid: rates.get(pid, 0), reverse=True)
+            
+        preferred = interested_peers[:k]
+        
+        if preferred:
+            preferred_str = ",".join(map(str, preferred))
+            logger.info(f"Peer {my_id} has the preferred neighbors {preferred_str}.")
+
+        with conn_manager.lock:
+            for peer_id, state in conn_manager.peers.items():
+                if peer_id in preferred:
+                    if state["choked_by_me"]:
+                        state["choked_by_me"] = False
+                        try:
+                            state["connection"].sendall(ProtocolMessage.unchoke())
+                        except Exception:
+                            pass
+                else:
+                    if not state["choked_by_me"]:
+                        state["choked_by_me"] = True
+                        try:
+                            state["connection"].sendall(ProtocolMessage.choke())
+                        except Exception:
+                            pass
+
+
+def connect_to_previous_peers(my_id, peer_data, tracker, logger, common, conn_manager):
     for pid in peer_data:
         if pid < my_id:
             try:
@@ -271,7 +312,7 @@ def connect_to_previous_peers(my_id, peer_data, tracker, logger, common):
                 response = sock.recv(32)
                 parsed = ProtocolMessage.decode_handshake(response)
                 
-                thread = threading.Thread(target=handle_connection, args=(sock, my_id, tracker, logger, common, pid, True))
+                thread = threading.Thread(target=handle_connection, args=(sock, my_id, tracker, logger, common, conn_manager, pid, True))
                 thread.start()
 
             except Exception as e:
@@ -300,15 +341,25 @@ if __name__ == "__main__":
         total_pieces=common["TotalPieces"],
         has_complete_file=my_info["file"]
     )
+    
+    conn_manager = ConnectionManager()
 
     server_thread = threading.Thread(
         target=start_server,
-        args=(my_peer_id, my_info["host"], my_info["port"], tracker, logger, common),
+        args=(my_peer_id, my_info["host"], my_info["port"], tracker, logger, common, conn_manager),
         daemon=True
     )
     server_thread.start()
 
     time.sleep(0.5)
-    connect_to_previous_peers(my_peer_id, peers, tracker, logger, common)
+
+    timer_thread = threading.Thread(
+        target=preferred_neighbors_timer,
+        args=(my_peer_id, common, conn_manager, logger, tracker),
+        daemon=True
+    )
+    timer_thread.start()
+
+    connect_to_previous_peers(my_peer_id, peers, tracker, logger, common, conn_manager)
 
     server_thread.join()
