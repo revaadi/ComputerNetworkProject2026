@@ -295,6 +295,33 @@ def preferred_neighbors_timer(my_id, common, conn_manager, logger, tracker):
                         except Exception:
                             pass
 
+def optimistic_unchoking_timer(my_id, common, conn_manager, logger):
+    interval = common["OptimisticUnchokingInterval"]
+
+    while True:
+        time.sleep(interval)
+
+        with conn_manager.lock:
+            candidates = [
+                pid for pid, state in conn_manager.peers.items()
+                if state["interested_in_me"] and state["choked_by_me"]
+            ]
+
+            if not candidates:
+                continue
+
+            chosen = random.choice(candidates)
+
+            state = conn_manager.peers[chosen]
+            state["choked_by_me"] = False
+
+            try:
+                state["connection"].sendall(ProtocolMessage.unchoke())
+            except Exception:
+                continue
+
+        logger.info(f"Peer {my_id} has the optimistically unchoked neighbor {chosen}.")
+
 
 def connect_to_previous_peers(my_id, peer_data, tracker, logger, common, conn_manager):
     for pid in peer_data:
@@ -359,6 +386,13 @@ if __name__ == "__main__":
         daemon=True
     )
     timer_thread.start()
+
+    optimistic_thread = threading.Thread(
+    target=optimistic_unchoking_timer,
+    args=(my_peer_id, common, conn_manager, logger),
+    daemon=True
+    )
+    optimistic_thread.start()
 
     connect_to_previous_peers(my_peer_id, peers, tracker, logger, common, conn_manager)
 
