@@ -24,7 +24,8 @@ class ConnectionManager:
                 "choking_me": True,
                 "interested_in_me": False,
                 "download_bytes": 0,
-                "neighbor_complete": False
+                "neighbor_complete": False,
+                "bitfield": None
             }
 
     def remove_connection(self, peer_id):
@@ -33,7 +34,6 @@ class ConnectionManager:
                 del self.peers[peer_id]
 
     def broadcast(self, message_bytes):
-        """Sends a message to all connected peers (used for 'have' messages)."""
         with self.lock:
             for peer_id, state in self.peers.items():
                 try:
@@ -42,7 +42,6 @@ class ConnectionManager:
                     pass
 
     def record_download(self, peer_id, num_bytes):
-        """Records bytes downloaded from a peer to calculate rates for the timer."""
         with self.lock:
             if peer_id in self.peers:
                 self.peers[peer_id]["download_bytes"] += num_bytes
@@ -58,19 +57,17 @@ class ConnectionManager:
                 self.peers[peer_id]["choking_me"] = is_choking
 
     def get_interested_peers(self):
-        """Returns a list of peer IDs that are currently interested in my data."""
         with self.lock:
             return [pid for pid, state in self.peers.items() if state["interested_in_me"]]
 
     def get_and_reset_download_rates(self):
-        """Returns current download bytes for all peers and resets counters to 0 for the next interval."""
         rates = {}
         with self.lock:
             for peer_id, state in self.peers.items():
                 rates[peer_id] = state["download_bytes"]
                 state["download_bytes"] = 0
         return rates
-    
+
     def set_state(self, peer_id, new_state):
         with self.lock:
             if peer_id in self.peers:
@@ -92,3 +89,24 @@ class ConnectionManager:
         with self.lock:
             if peer_id in self.peers:
                 self.peers[peer_id]["state"] = PeerState.DISCONNECTED
+
+    def get_peer_state_snapshot(self):
+        with self.lock:
+            return {
+                pid: state["state"]
+                for pid, state in self.peers.items()
+            }
+
+    def get_choked_peers(self):
+        with self.lock:
+            return [
+                pid for pid, state in self.peers.items()
+                if state["state"] == PeerState.CHOKED
+            ]
+
+    def get_unchoked_peers(self):
+        with self.lock:
+            return [
+                pid for pid, state in self.peers.items()
+                if state["state"] == PeerState.UNCHOKED
+            ]

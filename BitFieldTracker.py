@@ -13,6 +13,7 @@ class BitFieldTracker:
             self.bitfield = [0] * total_pieces
 
         self.requested_pieces = set()
+        self.peer_bitfields = {}
 
     def piece_owned(self, piece_index):
         with self.lock:
@@ -35,61 +36,74 @@ class BitFieldTracker:
         with self.lock:
             return all(self.bitfield)
 
+    def mark_peer_has(self, peer_id, piece_index):
+        with self.lock:
+            if peer_id not in self.peer_bitfields:
+                self.peer_bitfields[peer_id] = set()
+            self.peer_bitfields[peer_id].add(piece_index)
+
+    def update_peer_bitfield(self, peer_id, bitfield):
+        with self.lock:
+            self.peer_bitfields[peer_id] = {
+                i for i in range(len(bitfield)) if bitfield[i] == 1
+            }
+
+    def peer_has_piece(self, peer_id, piece_index):
+        with self.lock:
+            return (
+                peer_id in self.peer_bitfields and
+                piece_index in self.peer_bitfields[peer_id]
+            )
+
     def pick_from_neighbor(self, neighbor_bitfield):
         with self.lock:
-            possible_choices = [
+            choices = [
                 i for i in range(self.total_pieces)
                 if neighbor_bitfield[i] == 1
                 and self.bitfield[i] == 0
                 and i not in self.requested_pieces
             ]
-            if not possible_choices:
-                return None
-            return random.choice(possible_choices)
+            return random.choice(choices) if choices else None
 
     def bitfieldPayload(self):
         with self.lock:
             result = bytearray()
             for i in range(0, self.total_pieces, 8):
                 byte = 0
-                for bit_index in range(8):
-                    piece_index = i + bit_index
-                    if piece_index < self.total_pieces and self.bitfield[piece_index] == 1:
-                        byte |= (1 << (7 - bit_index))
+                for bit in range(8):
+                    idx = i + bit
+                    if idx < self.total_pieces and self.bitfield[idx]:
+                        byte |= (1 << (7 - bit))
                 result.append(byte)
             return bytes(result)
 
     def decode_bitfield(self, payload):
-        new_bitfield = [0] * self.total_pieces
-        piece_index = 0
+        bitfield = [0] * self.total_pieces
+        idx = 0
         for byte in payload:
             for bit in range(8):
-                if piece_index >= self.total_pieces:
+                if idx >= self.total_pieces:
                     break
                 if byte & (1 << (7 - bit)):
-                    new_bitfield[piece_index] = 1
-                piece_index += 1
-        return new_bitfield
+                    bitfield[idx] = 1
+                idx += 1
+        return bitfield
 
     def interested_in(self, neighbor_bitfield):
         with self.lock:
-            for i in range(self.total_pieces):
-                if neighbor_bitfield[i] == 1 and self.bitfield[i] == 0:
-                    return True
-            return False
+            return any(
+                neighbor_bitfield[i] == 1 and self.bitfield[i] == 0
+                for i in range(self.total_pieces)
+            )
 
-    def clear_requested(self, piece_index):
+    def has_all_pieces(self):
         with self.lock:
-            self.requested_pieces.discard(piece_index)
+            return all(self.bitfield)
 
-    def reset_requested_pieces(self):
+    def has_piece(self, piece_index):
         with self.lock:
-            self.requested_pieces.clear()
+            return self.bitfield[piece_index] == 1
 
     def missing_pieces(self):
         with self.lock:
             return [i for i in range(self.total_pieces) if self.bitfield[i] == 0]
-
-    def has_any_pieces(self):
-        with self.lock:
-            return any(self.bitfield)

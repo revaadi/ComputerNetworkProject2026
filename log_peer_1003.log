@@ -1,0 +1,421 @@
+[2026-04-18 14:36:31]: Peer 1003 started listening on 6003...
+[2026-04-18 14:36:35]: Peer 1003 makes a connection to Peer 1002.
+[2026-04-18 14:36:35]: Peer 1003 received the 'not interested' message from 1002.
+[2026-04-18 14:39:17]: Error in handle_connection with 1002: [WinError 10054] An existing connection was forcibly closed by the remote host
+[2026-04-18 14:39:24]: Peer 1003 listening on 6003
+[2026-04-18 14:43:48]: Peer 1003 listening on 6003
+[2026-04-18 14:43:56]: Preferred neighbors: []
+[2026-04-18 14:44:01]: Preferred neighbors: []
+[2026-04-18 14:44:06]: Preferred neighbors: []
+[2026-04-18 14:44:11]: Preferred neighbors: []
+[2026-04-18 14:44:16]: Preferred neighbors: []
+[2026-04-18 14:44:21]: Preferred neighbors: []
+[2026-04-18 14:44:21]: Peer 1003 failed to connect to 1001
+[2026-04-18 14:44:26]: Preferred neighbors: []
+[2026-04-18 14:44:31]: Preferred neighbors: []
+[2026-04-18 14:44:36]: Preferred neighbors: []
+[2026-04-18 14:44:41]: Preferred neighbors: []
+[2026-04-18 14:44:46]: Preferred neighbors: []
+[2026-04-18 14:44:51]: Preferred neighbors: []
+[2026-04-18 14:44:52]: Peer 1003 failed to connect to 1002
+[2026-04-18 14:45:27]: Peer 1003 started listening on 6003...
+[2026-04-18 14:45:30]: Peer 1003 makes a connection to Peer 1002.
+[2026-04-18 14:48:16]: Error in handle_connection with 1002: [WinError 10054] An existing connection was forcibly closed by the remote host
+[2026-04-18 14:48:35]: Peer 1003 listening on 6003
+[2026-04-18 14:48:38]: Connected to Peer 1001
+[2026-04-18 14:48:38]: Connected to Peer 1002
+[2026-04-18 15:01:45]: Peer 1003 listening on 6003
+[2026-04-18 15:01:47]: Connected to Peer 1001
+[2026-04-18 15:01:47]: Connected to Peer 1002
+[2026-04-18 15:04:32]: Peer 1003 listening on 6003
+[2026-04-18 15:04:35]: Connected to Peer 1001
+[2026-04-18 15:04:35]: Connected to Peer 1002
+[2026-04-18 15:10:27]: Peer 1003 listening on 6003
+[2026-04-18 15:10:29]: Connected to Peer 1001
+[2026-04-18 15:10:29]: Connected to Peer 1002
+[2026-04-18 15:17:28]: Peer 1003 listening on 6003
+[2026-04-18 15:17:30]: Connected to Peer 1001
+[2026-04-18 15:17:30]: Connected to Peer 1002
+[2026-04-18 15:23:06]: Peer 1003 listening on 6003
+[2026-04-18 15:23:08]: Connected to Peer 1001
+[2026-04-18 15:23:08]: Connected to Peer 1002
+[2026-04-18 15:28:38]: Peer 1003 listening on 6003
+[2026-04-18 15:34:23]: Peer 1003 listening on 6003
+[2026-04-18 15:34:27]: Received piece 44 from Peer 1001
+[2026-04-18 15:34:27]: Received piece 53 from Peer 1002
+[2026-04-18 15:34:29]: Received piece 128 from Peer 1001
+[2026-04-18 15:34:29]: Received piece 8 from Peer 1002
+[2026-04-18 15:34:31]: Received piece 28 from Peer 1001
+[2026-04-18 15:34:31]: Received piece 58 from Peer 1002
+[2026-04-18 15:34:33]: Received piece 59 from Peer 1001
+[2026-04-18 15:34:33]: Received piece 80 from Peer 1002
+[2026-04-18 15:34:35]: Received piece 43 from Peer 1002
+[2026-04-18 15:34:35]: Received piece 47 from Peer 1001
+[2026-04-18 15:34:37]: Received piece 98 from Peer 1001
+[2026-04-18 15:34:37]: Received piece 3 from Peer 1002
+[2026-04-18 15:34:39]: Received piece 40 from Peer 1001
+[2026-04-18 15:34:39]: Received piece 104 from Peer 1002
+[2026-04-18 15:34:41]: Received piece 108 from Peer 1001
+[2026-04-18 15:34:41]: Received piece 73 from Peer 1002
+[2026-04-18 15:34:43]: Received piece 36 from Peer 1001
+[2026-04-18 15:34:43]: Received piece 19 from Peer 1002
+[2026-04-18 15:34:45]: Received piece 4 from Peer 1001
+[2026-04-18 15:34:45]: Received piece 123 from Peer 1002
+[2026-04-18 15:34:47]: Received piece 71 from Peer 1001
+[2026-04-18 15:34:47]: Received piece 92 from Peer 1002
+[2026-04-18 15:34:49]: Received piece 78 from Peer 1001
+[2026-04-18 15:34:49]: Received piece 9 from Peer 1002
+[2026-04-18 15:34:51]: Received piece 72 from Peer 1002
+[2026-04-18 15:34:51]: Received piece 27 from Peer 1001
+[2026-04-18 15:34:53]: Received piece 61 from Peer 1002
+[2026-04-18 15:34:53]: Received piece 77 from Peer 1001
+[2026-04-18 15:34:55]: Received piece 83 from Peer 1001
+[2026-04-18 15:34:55]: Received piece 51 from Peer 1002
+[2026-04-18 15:34:57]: Received piece 30 from Peer 1001
+[2026-04-18 15:34:59]: Received piece 121 from Peer 1001
+[2026-04-18 15:35:01]: Received piece 14 from Peer 1001
+[2026-04-18 15:35:03]: Received piece 75 from Peer 1001
+[2026-04-18 15:35:05]: Received piece 49 from Peer 1001
+[2026-04-18 15:35:07]: Received piece 65 from Peer 1001
+[2026-04-18 15:35:09]: Received piece 13 from Peer 1001
+[2026-04-18 15:35:11]: Received piece 90 from Peer 1001
+[2026-04-18 15:35:13]: Received piece 57 from Peer 1001
+[2026-04-18 15:35:15]: Received piece 86 from Peer 1001
+[2026-04-18 15:35:17]: Received piece 37 from Peer 1001
+[2026-04-18 15:35:19]: Received piece 22 from Peer 1001
+[2026-04-18 15:35:21]: Received piece 41 from Peer 1001
+[2026-04-18 15:35:23]: Received piece 64 from Peer 1001
+[2026-04-18 15:35:25]: Received piece 97 from Peer 1001
+[2026-04-18 15:35:27]: Received piece 82 from Peer 1001
+[2026-04-18 15:35:29]: Received piece 62 from Peer 1001
+[2026-04-18 15:35:31]: Received piece 32 from Peer 1001
+[2026-04-18 15:35:33]: Received piece 68 from Peer 1001
+[2026-04-18 15:35:35]: Received piece 6 from Peer 1001
+[2026-04-18 15:35:37]: Received piece 66 from Peer 1001
+[2026-04-18 15:35:39]: Received piece 12 from Peer 1001
+[2026-04-18 15:35:41]: Received piece 21 from Peer 1001
+[2026-04-18 15:35:43]: Received piece 125 from Peer 1001
+[2026-04-18 15:35:45]: Received piece 60 from Peer 1001
+[2026-04-18 15:35:47]: Received piece 118 from Peer 1001
+[2026-04-18 15:35:49]: Received piece 81 from Peer 1001
+[2026-04-18 15:35:51]: Received piece 93 from Peer 1001
+[2026-04-18 15:35:53]: Received piece 67 from Peer 1001
+[2026-04-18 15:35:55]: Received piece 111 from Peer 1001
+[2026-04-18 15:35:57]: Received piece 87 from Peer 1001
+[2026-04-18 15:35:59]: Received piece 54 from Peer 1001
+[2026-04-18 15:36:01]: Received piece 5 from Peer 1001
+[2026-04-18 15:36:42]: Peer 1003 listening on 6003
+[2026-04-18 15:38:50]: Peer 1003 listening on 6003
+[2026-04-18 15:38:52]: Connected to Peer 1001
+[2026-04-18 15:38:52]: Connected to Peer 1002
+[2026-04-18 15:40:31]: Peer 1003 listening on 6003
+[2026-04-18 15:40:35]: Received piece 86 from Peer 1001
+[2026-04-18 15:40:35]: Received piece 15 from Peer 1002
+[2026-04-18 15:40:37]: Received piece 116 from Peer 1002
+[2026-04-18 15:40:37]: Received piece 124 from Peer 1001
+[2026-04-18 15:40:39]: Received piece 21 from Peer 1001
+[2026-04-18 15:40:39]: Received piece 67 from Peer 1002
+[2026-04-18 15:40:41]: Received piece 73 from Peer 1001
+[2026-04-18 15:40:41]: Received piece 74 from Peer 1002
+[2026-04-18 15:40:43]: Received piece 58 from Peer 1001
+[2026-04-18 15:40:43]: Received piece 23 from Peer 1002
+[2026-04-18 15:40:45]: Received piece 123 from Peer 1001
+[2026-04-18 15:40:45]: Received piece 8 from Peer 1002
+[2026-04-18 15:40:47]: Received piece 59 from Peer 1001
+[2026-04-18 15:40:47]: Received piece 112 from Peer 1002
+[2026-04-18 15:40:49]: Received piece 65 from Peer 1001
+[2026-04-18 15:40:49]: Received piece 71 from Peer 1002
+[2026-04-18 15:40:51]: Received piece 63 from Peer 1001
+[2026-04-18 15:40:51]: Received piece 57 from Peer 1002
+[2026-04-18 15:40:53]: Received piece 118 from Peer 1001
+[2026-04-18 15:40:53]: Received piece 117 from Peer 1002
+[2026-04-18 15:40:55]: Received piece 126 from Peer 1001
+[2026-04-18 15:40:55]: Received piece 48 from Peer 1002
+[2026-04-18 15:40:57]: Received piece 38 from Peer 1001
+[2026-04-18 15:40:57]: Received piece 66 from Peer 1002
+[2026-04-18 15:40:59]: Received piece 56 from Peer 1001
+[2026-04-18 15:40:59]: Received piece 36 from Peer 1002
+[2026-04-18 15:41:01]: Received piece 18 from Peer 1001
+[2026-04-18 15:41:01]: Received piece 6 from Peer 1002
+[2026-04-18 15:41:03]: Received piece 87 from Peer 1001
+[2026-04-18 15:41:03]: Received piece 28 from Peer 1002
+[2026-04-18 15:41:05]: Received piece 83 from Peer 1002
+[2026-04-18 15:41:05]: Received piece 84 from Peer 1001
+[2026-04-18 15:41:07]: Received piece 106 from Peer 1001
+[2026-04-18 15:41:07]: Received piece 79 from Peer 1002
+[2026-04-18 15:41:09]: Received piece 85 from Peer 1001
+[2026-04-18 15:41:09]: Received piece 51 from Peer 1002
+[2026-04-18 15:41:11]: Received piece 80 from Peer 1002
+[2026-04-18 15:41:11]: Received piece 55 from Peer 1001
+[2026-04-18 15:41:13]: Received piece 35 from Peer 1001
+[2026-04-18 15:41:13]: Received piece 127 from Peer 1002
+[2026-04-18 15:41:15]: Received piece 50 from Peer 1001
+[2026-04-18 15:41:15]: Received piece 115 from Peer 1002
+[2026-04-18 15:41:17]: Received piece 9 from Peer 1002
+[2026-04-18 15:41:17]: Received piece 108 from Peer 1001
+[2026-04-18 15:41:19]: Received piece 103 from Peer 1001
+[2026-04-18 15:41:19]: Received piece 107 from Peer 1002
+[2026-04-18 15:41:21]: Received piece 88 from Peer 1001
+[2026-04-18 15:41:21]: Received piece 102 from Peer 1002
+[2026-04-18 15:41:23]: Received piece 19 from Peer 1001
+[2026-04-18 15:41:23]: Received piece 76 from Peer 1002
+[2026-04-18 15:41:25]: Received piece 132 from Peer 1001
+[2026-04-18 15:41:25]: Received piece 20 from Peer 1002
+[2026-04-18 15:41:27]: Received piece 96 from Peer 1001
+[2026-04-18 15:41:27]: Received piece 114 from Peer 1002
+[2026-04-18 15:41:29]: Received piece 130 from Peer 1001
+[2026-04-18 15:41:29]: Received piece 44 from Peer 1002
+[2026-04-18 15:41:31]: Received piece 39 from Peer 1001
+[2026-04-18 15:41:31]: Received piece 91 from Peer 1002
+[2026-04-18 15:41:33]: Received piece 34 from Peer 1001
+[2026-04-18 15:41:33]: Received piece 110 from Peer 1002
+[2026-04-18 15:41:35]: Received piece 16 from Peer 1001
+[2026-04-18 15:41:35]: Received piece 4 from Peer 1002
+[2026-04-18 15:41:37]: Received piece 101 from Peer 1001
+[2026-04-18 15:41:37]: Received piece 98 from Peer 1002
+[2026-04-18 15:41:39]: Received piece 33 from Peer 1001
+[2026-04-18 15:41:39]: Received piece 49 from Peer 1002
+[2026-04-18 15:41:41]: Received piece 22 from Peer 1001
+[2026-04-18 15:41:41]: Received piece 64 from Peer 1002
+[2026-04-18 15:41:43]: Received piece 109 from Peer 1001
+[2026-04-18 15:41:43]: Received piece 32 from Peer 1002
+[2026-04-18 15:41:45]: Received piece 89 from Peer 1001
+[2026-04-18 15:41:45]: Received piece 78 from Peer 1002
+[2026-04-18 15:41:47]: Received piece 72 from Peer 1001
+[2026-04-18 15:41:47]: Received piece 60 from Peer 1002
+[2026-04-18 15:41:49]: Received piece 121 from Peer 1001
+[2026-04-18 15:41:49]: Received piece 1 from Peer 1002
+[2026-04-18 15:41:51]: Received piece 45 from Peer 1001
+[2026-04-18 15:41:51]: Received piece 13 from Peer 1002
+[2026-04-18 15:41:53]: Received piece 10 from Peer 1002
+[2026-04-18 15:41:53]: Received piece 82 from Peer 1001
+[2026-04-18 15:41:55]: Received piece 54 from Peer 1001
+[2026-04-18 15:41:55]: Received piece 94 from Peer 1002
+[2026-04-18 15:41:57]: Received piece 52 from Peer 1001
+[2026-04-18 15:41:57]: Received piece 95 from Peer 1002
+[2026-04-18 15:41:59]: Received piece 30 from Peer 1002
+[2026-04-18 15:41:59]: Received piece 100 from Peer 1001
+[2026-04-18 15:42:01]: Received piece 70 from Peer 1001
+[2026-04-18 15:42:01]: Received piece 99 from Peer 1002
+[2026-04-18 15:42:03]: Received piece 26 from Peer 1001
+[2026-04-18 15:42:03]: Received piece 12 from Peer 1002
+[2026-04-18 15:42:05]: Received piece 41 from Peer 1001
+[2026-04-18 15:42:05]: Received piece 77 from Peer 1002
+[2026-04-18 15:42:07]: Received piece 81 from Peer 1001
+[2026-04-18 15:42:07]: Received piece 29 from Peer 1002
+[2026-04-18 15:42:09]: Received piece 97 from Peer 1001
+[2026-04-18 15:42:09]: Received piece 68 from Peer 1002
+[2026-04-18 15:42:11]: Received piece 0 from Peer 1001
+[2026-04-18 15:42:11]: Received piece 47 from Peer 1002
+[2026-04-18 15:42:13]: Received piece 3 from Peer 1001
+[2026-04-18 15:42:13]: Received piece 24 from Peer 1002
+[2026-04-18 15:42:15]: Received piece 129 from Peer 1002
+[2026-04-18 15:42:15]: Received piece 53 from Peer 1001
+[2026-04-18 15:42:17]: Received piece 42 from Peer 1001
+[2026-04-18 15:42:17]: Received piece 43 from Peer 1002
+[2026-04-18 15:42:19]: Received piece 25 from Peer 1001
+[2026-04-18 15:42:19]: Received piece 27 from Peer 1002
+[2026-04-18 15:42:21]: Received piece 120 from Peer 1002
+[2026-04-18 15:42:21]: Received piece 92 from Peer 1001
+[2026-04-18 15:42:23]: Received piece 5 from Peer 1001
+[2026-04-18 15:42:23]: Received piece 62 from Peer 1002
+[2026-04-18 15:42:25]: Received piece 69 from Peer 1001
+[2026-04-18 15:42:25]: Received piece 90 from Peer 1002
+[2026-04-18 15:42:27]: Received piece 105 from Peer 1001
+[2026-04-18 15:42:27]: Received piece 2 from Peer 1002
+[2026-04-18 15:42:29]: Received piece 119 from Peer 1001
+[2026-04-18 15:42:29]: Received piece 111 from Peer 1002
+[2026-04-18 15:42:31]: Received piece 75 from Peer 1001
+[2026-04-18 15:42:31]: Received piece 122 from Peer 1002
+[2026-04-18 15:42:33]: Received piece 17 from Peer 1002
+[2026-04-18 15:42:33]: Received piece 37 from Peer 1001
+[2026-04-18 15:42:35]: Received piece 93 from Peer 1001
+[2026-04-18 15:42:35]: Received piece 131 from Peer 1002
+[2026-04-18 15:42:37]: Received piece 31 from Peer 1002
+[2026-04-18 15:42:37]: Received piece 31 from Peer 1001
+[2026-04-18 15:42:39]: Received piece 113 from Peer 1002
+[2026-04-18 15:42:39]: Received piece 7 from Peer 1001
+[2026-04-18 15:42:41]: Received piece 11 from Peer 1001
+[2026-04-18 15:42:41]: Received piece 104 from Peer 1002
+[2026-04-18 15:42:43]: Received piece 40 from Peer 1001
+[2026-04-18 15:42:43]: Received piece 40 from Peer 1002
+[2026-04-18 15:42:45]: Received piece 128 from Peer 1001
+[2026-04-18 15:42:45]: Received piece 61 from Peer 1002
+[2026-04-18 15:42:47]: Received piece 46 from Peer 1001
+[2026-04-18 15:42:47]: Received piece 125 from Peer 1002
+[2026-04-18 15:42:49]: Received piece 14 from Peer 1001
+[2026-04-18 15:42:49]: Received piece 14 from Peer 1002
+[2026-04-18 15:45:15]: Peer 1003 listening on 6003
+[2026-04-18 15:47:42]: Peer 1003 listening on 6003
+[2026-04-18 15:50:14]: Peer 1003 listening on 6003
+[2026-04-18 15:54:34]: Peer 1003 listening on 6003
+[2026-04-18 15:56:21]: Peer 1003 listening on 6003
+[2026-04-18 15:58:37]: Peer 1003 listening on 6003
+[2026-04-18 15:58:40]: Received piece 98 from Peer 1001
+[2026-04-18 15:59:51]: Peer 1003 listening on 6003
+[2026-04-18 15:59:54]: Received piece 37 from Peer 1002
+[2026-04-18 15:59:55]: Received piece 44 from Peer 1002
+[2026-04-18 15:59:56]: Received piece 39 from Peer 1002
+[2026-04-18 15:59:57]: Received piece 55 from Peer 1002
+[2026-04-18 16:05:45]: Peer 1003 listening on 6003
+[2026-04-18 16:06:16]: Peer 1003 listening on 6003
+[2026-04-18 16:06:19]: Received piece 33 from Peer 1002
+[2026-04-18 16:06:20]: Received piece 128 from Peer 1002
+[2026-04-18 16:06:21]: Received piece 27 from Peer 1002
+[2026-04-18 16:06:22]: Received piece 57 from Peer 1002
+[2026-04-18 16:08:50]: Peer 1003 listening on 6003
+[2026-04-18 16:19:06]: Peer 1003 listening on 6003
+[2026-04-18 16:21:46]: Peer 1003 listening on 6003
+[2026-04-18 16:22:53]: Peer 1003 listening on 6003
+[2026-04-18 16:22:57]: Received piece 6 from Peer 1001
+[2026-04-18 16:22:57]: Received piece 62 from Peer 1002
+[2026-04-18 16:22:59]: Received piece 78 from Peer 1001
+[2026-04-18 16:22:59]: Received piece 56 from Peer 1002
+[2026-04-18 16:23:01]: Received piece 9 from Peer 1001
+[2026-04-18 16:23:01]: Received piece 53 from Peer 1002
+[2026-04-18 16:23:03]: Received piece 3 from Peer 1001
+[2026-04-18 16:23:03]: Received piece 55 from Peer 1002
+[2026-04-18 16:23:05]: Received piece 37 from Peer 1001
+[2026-04-18 16:23:05]: Received piece 117 from Peer 1002
+[2026-04-18 16:23:07]: Received piece 95 from Peer 1002
+[2026-04-18 16:23:07]: Received piece 31 from Peer 1001
+[2026-04-18 16:23:09]: Received piece 122 from Peer 1001
+[2026-04-18 16:23:09]: Received piece 25 from Peer 1002
+[2026-04-18 16:23:11]: Received piece 68 from Peer 1001
+[2026-04-18 16:23:11]: Received piece 69 from Peer 1002
+[2026-04-18 16:23:13]: Received piece 41 from Peer 1001
+[2026-04-18 16:23:13]: Received piece 77 from Peer 1002
+[2026-04-18 16:23:15]: Received piece 74 from Peer 1001
+[2026-04-18 16:23:15]: Received piece 54 from Peer 1002
+[2026-04-18 16:23:17]: Received piece 102 from Peer 1001
+[2026-04-18 16:23:17]: Received piece 30 from Peer 1002
+[2026-04-18 16:23:19]: Received piece 109 from Peer 1001
+[2026-04-18 16:23:19]: Received piece 112 from Peer 1002
+[2026-04-18 16:23:21]: Received piece 2 from Peer 1001
+[2026-04-18 16:23:21]: Received piece 85 from Peer 1002
+[2026-04-18 16:23:23]: Received piece 114 from Peer 1001
+[2026-04-18 16:23:23]: Received piece 114 from Peer 1002
+[2026-04-18 16:23:25]: Received piece 75 from Peer 1001
+[2026-04-18 16:26:46]: Peer 1003 listening on 6003
+[2026-04-18 16:29:21]: Peer 1003 listening on 6003
+[2026-04-18 16:30:48]: Peer 1003 listening on 6003
+[2026-04-18 16:30:52]: Received piece 92 from Peer 1001
+[2026-04-18 16:30:52]: Received piece 126 from Peer 1002
+[2026-04-18 16:30:54]: Received piece 88 from Peer 1001
+[2026-04-18 16:30:54]: Received piece 56 from Peer 1002
+[2026-04-18 16:30:56]: Received piece 101 from Peer 1001
+[2026-04-18 16:30:56]: Received piece 46 from Peer 1002
+[2026-04-18 16:30:58]: Received piece 18 from Peer 1001
+[2026-04-18 16:30:58]: Received piece 74 from Peer 1002
+[2026-04-18 16:31:00]: Received piece 115 from Peer 1001
+[2026-04-18 16:31:00]: Received piece 53 from Peer 1002
+[2026-04-18 16:31:02]: Received piece 118 from Peer 1001
+[2026-04-18 16:31:02]: Received piece 97 from Peer 1002
+[2026-04-18 16:31:04]: Received piece 8 from Peer 1002
+[2026-04-18 16:31:04]: Received piece 26 from Peer 1001
+[2026-04-18 16:31:06]: Received piece 25 from Peer 1001
+[2026-04-18 16:31:06]: Received piece 19 from Peer 1002
+[2026-04-18 16:31:08]: Received piece 110 from Peer 1001
+[2026-04-18 16:31:08]: Received piece 70 from Peer 1002
+[2026-04-18 16:31:10]: Received piece 121 from Peer 1001
+[2026-04-18 16:31:10]: Received piece 13 from Peer 1002
+[2026-04-18 16:31:12]: Received piece 67 from Peer 1001
+[2026-04-18 16:31:12]: Received piece 124 from Peer 1002
+[2026-04-18 16:31:14]: Received piece 44 from Peer 1001
+[2026-04-18 16:31:14]: Received piece 34 from Peer 1002
+[2026-04-18 16:31:16]: Received piece 61 from Peer 1001
+[2026-04-18 16:31:16]: Received piece 71 from Peer 1002
+[2026-04-18 16:31:18]: Received piece 85 from Peer 1001
+[2026-04-18 16:31:18]: Received piece 2 from Peer 1002
+[2026-04-18 16:31:20]: Received piece 22 from Peer 1001
+[2026-04-18 16:31:20]: Received piece 129 from Peer 1002
+[2026-04-18 16:31:22]: Received piece 65 from Peer 1001
+[2026-04-18 16:31:22]: Received piece 45 from Peer 1002
+[2026-04-18 16:31:24]: Received piece 15 from Peer 1001
+[2026-04-18 16:31:24]: Received piece 84 from Peer 1002
+[2026-04-18 16:31:26]: Received piece 128 from Peer 1002
+[2026-04-18 16:31:26]: Received piece 4 from Peer 1001
+[2026-04-18 16:31:28]: Received piece 100 from Peer 1001
+[2026-04-18 16:31:28]: Received piece 32 from Peer 1002
+[2026-04-18 16:31:30]: Received piece 9 from Peer 1001
+[2026-04-18 16:31:30]: Received piece 40 from Peer 1002
+[2026-04-18 16:31:32]: Received piece 78 from Peer 1001
+[2026-04-18 16:31:32]: Received piece 12 from Peer 1002
+[2026-04-18 16:31:34]: Received piece 103 from Peer 1001
+[2026-04-18 16:31:34]: Received piece 20 from Peer 1002
+[2026-04-18 16:31:36]: Received piece 16 from Peer 1001
+[2026-04-18 16:31:36]: Received piece 43 from Peer 1002
+[2026-04-18 16:31:38]: Received piece 114 from Peer 1001
+[2026-04-18 16:31:38]: Received piece 21 from Peer 1002
+[2026-04-18 16:31:40]: Received piece 96 from Peer 1001
+[2026-04-18 16:31:40]: Received piece 131 from Peer 1002
+[2026-04-18 16:31:42]: Received piece 82 from Peer 1001
+[2026-04-18 16:31:42]: Received piece 112 from Peer 1002
+[2026-04-18 16:31:44]: Received piece 89 from Peer 1001
+[2026-04-18 16:31:44]: Received piece 98 from Peer 1002
+[2026-04-18 16:31:46]: Received piece 77 from Peer 1001
+[2026-04-18 16:31:46]: Received piece 120 from Peer 1002
+[2026-04-18 16:31:48]: Received piece 107 from Peer 1001
+[2026-04-18 16:31:48]: Received piece 42 from Peer 1002
+[2026-04-18 16:31:50]: Received piece 36 from Peer 1001
+[2026-04-18 16:31:50]: Received piece 76 from Peer 1002
+[2026-04-18 16:31:52]: Received piece 113 from Peer 1002
+[2026-04-18 16:31:52]: Received piece 39 from Peer 1001
+[2026-04-18 16:31:54]: Received piece 93 from Peer 1001
+[2026-04-18 16:31:54]: Received piece 17 from Peer 1002
+[2026-04-18 16:31:56]: Received piece 28 from Peer 1001
+[2026-04-18 16:31:56]: Received piece 99 from Peer 1002
+[2026-04-18 16:31:58]: Received piece 111 from Peer 1001
+[2026-04-18 16:31:58]: Received piece 111 from Peer 1002
+[2026-04-18 16:32:00]: Received piece 109 from Peer 1001
+[2026-04-18 16:32:00]: Received piece 108 from Peer 1002
+[2026-04-18 16:32:02]: Received piece 91 from Peer 1001
+[2026-04-18 16:32:02]: Received piece 73 from Peer 1002
+[2026-04-18 16:32:04]: Received piece 63 from Peer 1001
+[2026-04-18 16:32:04]: Received piece 94 from Peer 1002
+[2026-04-18 16:32:06]: Received piece 90 from Peer 1001
+[2026-04-18 16:32:06]: Received piece 106 from Peer 1002
+[2026-04-18 16:32:08]: Received piece 86 from Peer 1002
+[2026-04-18 16:32:08]: Received piece 23 from Peer 1001
+[2026-04-18 16:32:10]: Received piece 69 from Peer 1001
+[2026-04-18 16:32:10]: Received piece 122 from Peer 1002
+[2026-04-18 16:32:12]: Received piece 57 from Peer 1001
+[2026-04-18 16:32:12]: Received piece 55 from Peer 1002
+[2026-04-18 16:32:14]: Received piece 80 from Peer 1001
+[2026-04-18 16:32:14]: Received piece 47 from Peer 1002
+[2026-04-18 16:32:16]: Received piece 105 from Peer 1002
+[2026-04-18 16:32:16]: Received piece 58 from Peer 1001
+[2026-04-18 16:32:18]: Received piece 33 from Peer 1001
+[2026-04-18 16:32:18]: Received piece 87 from Peer 1002
+[2026-04-18 16:32:20]: Received piece 29 from Peer 1001
+[2026-04-18 16:32:20]: Received piece 3 from Peer 1002
+[2026-04-18 16:32:22]: Received piece 119 from Peer 1001
+[2026-04-18 16:32:22]: Received piece 68 from Peer 1002
+[2026-04-18 16:32:24]: Received piece 10 from Peer 1001
+[2026-04-18 16:32:24]: Received piece 11 from Peer 1002
+[2026-04-18 16:32:26]: Received piece 62 from Peer 1001
+[2026-04-18 16:32:26]: Received piece 37 from Peer 1002
+[2026-04-18 16:32:28]: Received piece 1 from Peer 1001
+[2026-04-18 16:32:28]: Received piece 79 from Peer 1002
+[2026-04-18 16:32:30]: Received piece 104 from Peer 1001
+[2026-04-18 16:32:30]: Received piece 7 from Peer 1002
+[2026-04-18 16:32:32]: Received piece 127 from Peer 1001
+[2026-04-18 16:32:32]: Received piece 117 from Peer 1002
+[2026-04-18 16:32:34]: Received piece 5 from Peer 1001
+[2026-04-18 16:32:34]: Received piece 51 from Peer 1002
+[2026-04-18 16:32:36]: Received piece 75 from Peer 1001
+[2026-04-18 16:32:36]: Received piece 35 from Peer 1002
+[2026-04-18 16:37:46]: Peer 1003 listening on 6003
+[2026-04-18 16:39:07]: Peer 1003 listening on 6003
+[2026-04-18 16:42:56]: Peer 1003 listening on 6003
+[2026-04-18 16:43:33]: Peer 1003 listening on 6003
+[2026-04-18 16:43:37]: Received piece 76 from Peer 1001
+[2026-04-18 16:43:37]: Received piece 112 from Peer 1002
+[2026-04-18 16:43:39]: Received piece 59 from Peer 1001
+[2026-04-18 16:43:39]: Received piece 103 from Peer 1002
+[2026-04-18 16:43:41]: Received piece 80 from Peer 1001
+[2026-04-18 16:43:41]: Received piece 60 from Peer 1002
+[2026-04-18 16:43:43]: Received piece 9 from Peer 1001
+[2026-04-18 16:43:43]: Received piece 70 from Peer 1002
+[2026-04-18 16:43:45]: Received piece 102 from Peer 1001
+[2026-04-18 16:43:45]: Received piece 8 from Peer 1002

@@ -1,0 +1,711 @@
+[2026-04-18 14:32:14]: Peer 1002 started listening on 6002...
+[2026-04-18 14:32:29]: Peer 1002 started listening on 6002...
+[2026-04-18 14:32:30]: Peer 1002 makes a connection to Peer 1001.
+[2026-04-18 14:32:30]: Peer 1002 is unchoked by 1001.
+[2026-04-18 14:32:30]: Peer 1002 has downloaded the piece 84 from 1001. Now the number of pieces it has is 1.
+[2026-04-18 14:32:30]: Peer 1002 received the 'not interested' message from 1001.
+[2026-04-18 14:32:30]: Peer 1002 has downloaded the piece 90 from 1001. Now the number of pieces it has is 2.
+[2026-04-18 14:32:30]: Peer 1002 received the 'not interested' message from 1001.
+[2026-04-18 14:32:30]: Peer 1002 has downloaded the piece 29 from 1001. Now the number of pieces it has is 3.
+[2026-04-18 14:32:30]: Peer 1002 received the 'not interested' message from 1001.
+[2026-04-18 14:32:30]: Peer 1002 has downloaded the piece 82 from 1001. Now the number of pieces it has is 4.
+[2026-04-18 14:32:30]: Peer 1002 received the 'not interested' message from 1001.
+[2026-04-18 14:32:30]: Peer 1002 has downloaded the piece 101 from 1001. Now the number of pieces it has is 5.
+[2026-04-18 14:32:30]: Peer 1002 received the 'not interested' message from 1001.
+[2026-04-18 14:32:30]: Peer 1002 has downloaded the piece 57 from 1001. Now the number of pieces it has is 6.
+[2026-04-18 14:32:30]: Peer 1002 received the 'not interested' message from 1001.
+[2026-04-18 14:32:30]: Peer 1002 has downloaded the piece 111 from 1001. Now the number of pieces it has is 7.
+[2026-04-18 14:32:30]: Peer 1002 received the 'not interested' message from 1001.
+[2026-04-18 14:32:30]: Peer 1002 has downloaded the piece 35 from 1001. Now the number of pieces it has is 8.
+[2026-04-18 14:32:30]: Peer 1002 received the 'not interested' message from 1001.
+[2026-04-18 14:32:30]: Peer 1002 has downloaded the piece 28 from 1001. Now the number of pieces it has is 9.
+[2026-04-18 14:32:30]: Peer 1002 received the 'not interested' message from 1001.
+[2026-04-18 14:32:30]: Peer 1002 has downloaded the piece 127 from 1001. Now the number of pieces it has is 10.
+[2026-04-18 14:32:30]: Peer 1002 received the 'not interested' message from 1001.
+[2026-04-18 14:32:30]: Peer 1002 has downloaded the piece 37 from 1001. Now the number of pieces it has is 11.
+[2026-04-18 14:32:30]: Peer 1002 received the 'not interested' message from 1001.
+[2026-04-18 14:32:30]: Peer 1002 has downloaded the piece 63 from 1001. Now the number of pieces it has is 12.
+[2026-04-18 14:32:30]: Peer 1002 received the 'not interested' message from 1001.
+[2026-04-18 14:32:30]: Peer 1002 has downloaded the piece 7 from 1001. Now the number of pieces it has is 13.
+[2026-04-18 14:32:30]: Peer 1002 received the 'not interested' message from 1001.
+[2026-04-18 14:32:30]: Peer 1002 has downloaded the piece 81 from 1001. Now the number of pieces it has is 14.
+[2026-04-18 14:32:30]: Peer 1002 received the 'not interested' message from 1001.
+[2026-04-18 14:32:30]: Peer 1002 has downloaded the piece 69 from 1001. Now the number of pieces it has is 15.
+[2026-04-18 14:32:30]: Peer 1002 received the 'not interested' message from 1001.
+[2026-04-18 14:32:30]: Peer 1002 has downloaded the piece 108 from 1001. Now the number of pieces it has is 16.
+[2026-04-18 14:32:30]: Peer 1002 received the 'not interested' message from 1001.
+[2026-04-18 14:32:30]: Peer 1002 has downloaded the piece 52 from 1001. Now the number of pieces it has is 17.
+[2026-04-18 14:32:30]: Peer 1002 received the 'not interested' message from 1001.
+[2026-04-18 14:32:30]: Peer 1002 has downloaded the piece 109 from 1001. Now the number of pieces it has is 18.
+[2026-04-18 14:32:30]: Peer 1002 received the 'not interested' message from 1001.
+[2026-04-18 14:32:30]: Peer 1002 has downloaded the piece 61 from 1001. Now the number of pieces it has is 19.
+[2026-04-18 14:32:30]: Peer 1002 received the 'not interested' message from 1001.
+[2026-04-18 14:32:30]: Peer 1002 has downloaded the piece 124 from 1001. Now the number of pieces it has is 20.
+[2026-04-18 14:32:30]: Peer 1002 received the 'not interested' message from 1001.
+[2026-04-18 14:32:30]: Peer 1002 has downloaded the piece 50 from 1001. Now the number of pieces it has is 21.
+[2026-04-18 14:32:30]: Peer 1002 received the 'not interested' message from 1001.
+[2026-04-18 14:32:30]: Peer 1002 has downloaded the piece 76 from 1001. Now the number of pieces it has is 22.
+[2026-04-18 14:32:30]: Peer 1002 received the 'not interested' message from 1001.
+[2026-04-18 14:32:30]: Peer 1002 has downloaded the piece 44 from 1001. Now the number of pieces it has is 23.
+[2026-04-18 14:32:30]: Peer 1002 received the 'not interested' message from 1001.
+[2026-04-18 14:32:30]: Peer 1002 has downloaded the piece 70 from 1001. Now the number of pieces it has is 24.
+[2026-04-18 14:32:30]: Peer 1002 received the 'not interested' message from 1001.
+[2026-04-18 14:32:30]: Peer 1002 has downloaded the piece 8 from 1001. Now the number of pieces it has is 25.
+[2026-04-18 14:32:30]: Peer 1002 received the 'not interested' message from 1001.
+[2026-04-18 14:32:30]: Peer 1002 has downloaded the piece 87 from 1001. Now the number of pieces it has is 26.
+[2026-04-18 14:32:30]: Peer 1002 received the 'not interested' message from 1001.
+[2026-04-18 14:32:30]: Peer 1002 has downloaded the piece 116 from 1001. Now the number of pieces it has is 27.
+[2026-04-18 14:32:30]: Peer 1002 received the 'not interested' message from 1001.
+[2026-04-18 14:32:30]: Peer 1002 has downloaded the piece 38 from 1001. Now the number of pieces it has is 28.
+[2026-04-18 14:32:30]: Peer 1002 received the 'not interested' message from 1001.
+[2026-04-18 14:32:30]: Peer 1002 has downloaded the piece 40 from 1001. Now the number of pieces it has is 29.
+[2026-04-18 14:32:30]: Peer 1002 received the 'not interested' message from 1001.
+[2026-04-18 14:32:30]: Peer 1002 has downloaded the piece 104 from 1001. Now the number of pieces it has is 30.
+[2026-04-18 14:32:30]: Peer 1002 received the 'not interested' message from 1001.
+[2026-04-18 14:32:30]: Peer 1002 has downloaded the piece 59 from 1001. Now the number of pieces it has is 31.
+[2026-04-18 14:32:30]: Peer 1002 received the 'not interested' message from 1001.
+[2026-04-18 14:32:30]: Peer 1002 has downloaded the piece 110 from 1001. Now the number of pieces it has is 32.
+[2026-04-18 14:32:30]: Peer 1002 received the 'not interested' message from 1001.
+[2026-04-18 14:32:30]: Peer 1002 has downloaded the piece 93 from 1001. Now the number of pieces it has is 33.
+[2026-04-18 14:32:30]: Peer 1002 received the 'not interested' message from 1001.
+[2026-04-18 14:32:30]: Peer 1002 has downloaded the piece 2 from 1001. Now the number of pieces it has is 34.
+[2026-04-18 14:32:30]: Peer 1002 received the 'not interested' message from 1001.
+[2026-04-18 14:32:30]: Peer 1002 has downloaded the piece 86 from 1001. Now the number of pieces it has is 35.
+[2026-04-18 14:32:30]: Peer 1002 received the 'not interested' message from 1001.
+[2026-04-18 14:32:30]: Peer 1002 has downloaded the piece 31 from 1001. Now the number of pieces it has is 36.
+[2026-04-18 14:32:30]: Peer 1002 received the 'not interested' message from 1001.
+[2026-04-18 14:32:30]: Peer 1002 has downloaded the piece 3 from 1001. Now the number of pieces it has is 37.
+[2026-04-18 14:32:30]: Peer 1002 received the 'not interested' message from 1001.
+[2026-04-18 14:32:30]: Peer 1002 has downloaded the piece 12 from 1001. Now the number of pieces it has is 38.
+[2026-04-18 14:32:30]: Peer 1002 received the 'not interested' message from 1001.
+[2026-04-18 14:32:30]: Peer 1002 has downloaded the piece 74 from 1001. Now the number of pieces it has is 39.
+[2026-04-18 14:32:30]: Peer 1002 received the 'not interested' message from 1001.
+[2026-04-18 14:32:30]: Peer 1002 has downloaded the piece 17 from 1001. Now the number of pieces it has is 40.
+[2026-04-18 14:32:30]: Peer 1002 received the 'not interested' message from 1001.
+[2026-04-18 14:32:30]: Peer 1002 has downloaded the piece 14 from 1001. Now the number of pieces it has is 41.
+[2026-04-18 14:32:30]: Peer 1002 received the 'not interested' message from 1001.
+[2026-04-18 14:32:30]: Peer 1002 has downloaded the piece 27 from 1001. Now the number of pieces it has is 42.
+[2026-04-18 14:32:30]: Peer 1002 received the 'not interested' message from 1001.
+[2026-04-18 14:32:30]: Peer 1002 has downloaded the piece 106 from 1001. Now the number of pieces it has is 43.
+[2026-04-18 14:32:30]: Peer 1002 received the 'not interested' message from 1001.
+[2026-04-18 14:32:30]: Peer 1002 has downloaded the piece 9 from 1001. Now the number of pieces it has is 44.
+[2026-04-18 14:32:30]: Peer 1002 received the 'not interested' message from 1001.
+[2026-04-18 14:32:30]: Peer 1002 has downloaded the piece 62 from 1001. Now the number of pieces it has is 45.
+[2026-04-18 14:32:30]: Peer 1002 received the 'not interested' message from 1001.
+[2026-04-18 14:32:30]: Peer 1002 has downloaded the piece 121 from 1001. Now the number of pieces it has is 46.
+[2026-04-18 14:32:30]: Peer 1002 received the 'not interested' message from 1001.
+[2026-04-18 14:32:30]: Peer 1002 has downloaded the piece 22 from 1001. Now the number of pieces it has is 47.
+[2026-04-18 14:32:30]: Peer 1002 received the 'not interested' message from 1001.
+[2026-04-18 14:32:30]: Peer 1002 has downloaded the piece 15 from 1001. Now the number of pieces it has is 48.
+[2026-04-18 14:32:30]: Peer 1002 received the 'not interested' message from 1001.
+[2026-04-18 14:32:30]: Peer 1002 has downloaded the piece 129 from 1001. Now the number of pieces it has is 49.
+[2026-04-18 14:32:30]: Peer 1002 received the 'not interested' message from 1001.
+[2026-04-18 14:32:30]: Peer 1002 has downloaded the piece 56 from 1001. Now the number of pieces it has is 50.
+[2026-04-18 14:32:30]: Peer 1002 received the 'not interested' message from 1001.
+[2026-04-18 14:32:30]: Peer 1002 has downloaded the piece 131 from 1001. Now the number of pieces it has is 51.
+[2026-04-18 14:32:30]: Peer 1002 received the 'not interested' message from 1001.
+[2026-04-18 14:32:30]: Peer 1002 has downloaded the piece 66 from 1001. Now the number of pieces it has is 52.
+[2026-04-18 14:32:30]: Peer 1002 received the 'not interested' message from 1001.
+[2026-04-18 14:32:30]: Peer 1002 has downloaded the piece 102 from 1001. Now the number of pieces it has is 53.
+[2026-04-18 14:32:30]: Peer 1002 received the 'not interested' message from 1001.
+[2026-04-18 14:32:30]: Peer 1002 has downloaded the piece 10 from 1001. Now the number of pieces it has is 54.
+[2026-04-18 14:32:30]: Peer 1002 received the 'not interested' message from 1001.
+[2026-04-18 14:32:31]: Peer 1002 has downloaded the piece 89 from 1001. Now the number of pieces it has is 55.
+[2026-04-18 14:32:31]: Peer 1002 received the 'not interested' message from 1001.
+[2026-04-18 14:32:31]: Peer 1002 has downloaded the piece 75 from 1001. Now the number of pieces it has is 56.
+[2026-04-18 14:32:31]: Peer 1002 received the 'not interested' message from 1001.
+[2026-04-18 14:32:31]: Peer 1002 has downloaded the piece 1 from 1001. Now the number of pieces it has is 57.
+[2026-04-18 14:32:31]: Peer 1002 received the 'not interested' message from 1001.
+[2026-04-18 14:32:31]: Peer 1002 has downloaded the piece 46 from 1001. Now the number of pieces it has is 58.
+[2026-04-18 14:32:31]: Peer 1002 received the 'not interested' message from 1001.
+[2026-04-18 14:32:31]: Peer 1002 has downloaded the piece 107 from 1001. Now the number of pieces it has is 59.
+[2026-04-18 14:32:31]: Peer 1002 received the 'not interested' message from 1001.
+[2026-04-18 14:32:31]: Peer 1002 has downloaded the piece 132 from 1001. Now the number of pieces it has is 60.
+[2026-04-18 14:32:31]: Peer 1002 received the 'not interested' message from 1001.
+[2026-04-18 14:32:31]: Peer 1002 has downloaded the piece 118 from 1001. Now the number of pieces it has is 61.
+[2026-04-18 14:32:31]: Peer 1002 received the 'not interested' message from 1001.
+[2026-04-18 14:32:31]: Peer 1002 has downloaded the piece 95 from 1001. Now the number of pieces it has is 62.
+[2026-04-18 14:32:31]: Peer 1002 received the 'not interested' message from 1001.
+[2026-04-18 14:32:31]: Peer 1002 has downloaded the piece 80 from 1001. Now the number of pieces it has is 63.
+[2026-04-18 14:32:31]: Peer 1002 received the 'not interested' message from 1001.
+[2026-04-18 14:32:31]: Peer 1002 has downloaded the piece 13 from 1001. Now the number of pieces it has is 64.
+[2026-04-18 14:32:31]: Peer 1002 received the 'not interested' message from 1001.
+[2026-04-18 14:32:31]: Peer 1002 has downloaded the piece 18 from 1001. Now the number of pieces it has is 65.
+[2026-04-18 14:32:31]: Peer 1002 received the 'not interested' message from 1001.
+[2026-04-18 14:32:31]: Peer 1002 has downloaded the piece 64 from 1001. Now the number of pieces it has is 66.
+[2026-04-18 14:32:31]: Peer 1002 received the 'not interested' message from 1001.
+[2026-04-18 14:32:31]: Peer 1002 has downloaded the piece 34 from 1001. Now the number of pieces it has is 67.
+[2026-04-18 14:32:31]: Peer 1002 received the 'not interested' message from 1001.
+[2026-04-18 14:32:31]: Peer 1002 has downloaded the piece 100 from 1001. Now the number of pieces it has is 68.
+[2026-04-18 14:32:31]: Peer 1002 received the 'not interested' message from 1001.
+[2026-04-18 14:32:31]: Peer 1002 has downloaded the piece 21 from 1001. Now the number of pieces it has is 69.
+[2026-04-18 14:32:31]: Peer 1002 received the 'not interested' message from 1001.
+[2026-04-18 14:32:31]: Peer 1002 has downloaded the piece 47 from 1001. Now the number of pieces it has is 70.
+[2026-04-18 14:32:31]: Peer 1002 received the 'not interested' message from 1001.
+[2026-04-18 14:32:31]: Peer 1002 has downloaded the piece 43 from 1001. Now the number of pieces it has is 71.
+[2026-04-18 14:32:31]: Peer 1002 received the 'not interested' message from 1001.
+[2026-04-18 14:32:31]: Peer 1002 has downloaded the piece 24 from 1001. Now the number of pieces it has is 72.
+[2026-04-18 14:32:31]: Peer 1002 received the 'not interested' message from 1001.
+[2026-04-18 14:32:31]: Peer 1002 has downloaded the piece 125 from 1001. Now the number of pieces it has is 73.
+[2026-04-18 14:32:31]: Peer 1002 received the 'not interested' message from 1001.
+[2026-04-18 14:32:31]: Peer 1002 has downloaded the piece 94 from 1001. Now the number of pieces it has is 74.
+[2026-04-18 14:32:31]: Peer 1002 received the 'not interested' message from 1001.
+[2026-04-18 14:32:31]: Peer 1002 has downloaded the piece 49 from 1001. Now the number of pieces it has is 75.
+[2026-04-18 14:32:31]: Peer 1002 received the 'not interested' message from 1001.
+[2026-04-18 14:32:31]: Peer 1002 has downloaded the piece 96 from 1001. Now the number of pieces it has is 76.
+[2026-04-18 14:32:31]: Peer 1002 received the 'not interested' message from 1001.
+[2026-04-18 14:32:31]: Peer 1002 has downloaded the piece 11 from 1001. Now the number of pieces it has is 77.
+[2026-04-18 14:32:31]: Peer 1002 received the 'not interested' message from 1001.
+[2026-04-18 14:32:31]: Peer 1002 has downloaded the piece 112 from 1001. Now the number of pieces it has is 78.
+[2026-04-18 14:32:31]: Peer 1002 received the 'not interested' message from 1001.
+[2026-04-18 14:32:31]: Peer 1002 has downloaded the piece 73 from 1001. Now the number of pieces it has is 79.
+[2026-04-18 14:32:31]: Peer 1002 received the 'not interested' message from 1001.
+[2026-04-18 14:32:31]: Peer 1002 has downloaded the piece 32 from 1001. Now the number of pieces it has is 80.
+[2026-04-18 14:32:31]: Peer 1002 received the 'not interested' message from 1001.
+[2026-04-18 14:32:31]: Peer 1002 has downloaded the piece 119 from 1001. Now the number of pieces it has is 81.
+[2026-04-18 14:32:31]: Peer 1002 received the 'not interested' message from 1001.
+[2026-04-18 14:32:31]: Peer 1002 has downloaded the piece 103 from 1001. Now the number of pieces it has is 82.
+[2026-04-18 14:32:31]: Peer 1002 received the 'not interested' message from 1001.
+[2026-04-18 14:32:31]: Peer 1002 has downloaded the piece 97 from 1001. Now the number of pieces it has is 83.
+[2026-04-18 14:32:31]: Peer 1002 received the 'not interested' message from 1001.
+[2026-04-18 14:32:31]: Peer 1002 has downloaded the piece 23 from 1001. Now the number of pieces it has is 84.
+[2026-04-18 14:32:31]: Peer 1002 received the 'not interested' message from 1001.
+[2026-04-18 14:32:31]: Peer 1002 has downloaded the piece 58 from 1001. Now the number of pieces it has is 85.
+[2026-04-18 14:32:31]: Peer 1002 received the 'not interested' message from 1001.
+[2026-04-18 14:32:31]: Peer 1002 has downloaded the piece 6 from 1001. Now the number of pieces it has is 86.
+[2026-04-18 14:32:31]: Peer 1002 received the 'not interested' message from 1001.
+[2026-04-18 14:32:31]: Peer 1002 has downloaded the piece 45 from 1001. Now the number of pieces it has is 87.
+[2026-04-18 14:32:31]: Peer 1002 received the 'not interested' message from 1001.
+[2026-04-18 14:32:31]: Peer 1002 has downloaded the piece 51 from 1001. Now the number of pieces it has is 88.
+[2026-04-18 14:32:31]: Peer 1002 received the 'not interested' message from 1001.
+[2026-04-18 14:32:31]: Peer 1002 has downloaded the piece 53 from 1001. Now the number of pieces it has is 89.
+[2026-04-18 14:32:31]: Peer 1002 received the 'not interested' message from 1001.
+[2026-04-18 14:32:31]: Peer 1002 has downloaded the piece 65 from 1001. Now the number of pieces it has is 90.
+[2026-04-18 14:32:31]: Peer 1002 received the 'not interested' message from 1001.
+[2026-04-18 14:32:31]: Peer 1002 has downloaded the piece 36 from 1001. Now the number of pieces it has is 91.
+[2026-04-18 14:32:31]: Peer 1002 received the 'not interested' message from 1001.
+[2026-04-18 14:32:31]: Peer 1002 has downloaded the piece 25 from 1001. Now the number of pieces it has is 92.
+[2026-04-18 14:32:31]: Peer 1002 received the 'not interested' message from 1001.
+[2026-04-18 14:32:31]: Peer 1002 has downloaded the piece 114 from 1001. Now the number of pieces it has is 93.
+[2026-04-18 14:32:31]: Peer 1002 received the 'not interested' message from 1001.
+[2026-04-18 14:32:31]: Peer 1002 has downloaded the piece 20 from 1001. Now the number of pieces it has is 94.
+[2026-04-18 14:32:31]: Peer 1002 received the 'not interested' message from 1001.
+[2026-04-18 14:32:31]: Peer 1002 has downloaded the piece 30 from 1001. Now the number of pieces it has is 95.
+[2026-04-18 14:32:31]: Peer 1002 received the 'not interested' message from 1001.
+[2026-04-18 14:32:31]: Peer 1002 has downloaded the piece 72 from 1001. Now the number of pieces it has is 96.
+[2026-04-18 14:32:31]: Peer 1002 received the 'not interested' message from 1001.
+[2026-04-18 14:32:31]: Peer 1002 has downloaded the piece 98 from 1001. Now the number of pieces it has is 97.
+[2026-04-18 14:32:31]: Peer 1002 received the 'not interested' message from 1001.
+[2026-04-18 14:32:31]: Peer 1002 has downloaded the piece 91 from 1001. Now the number of pieces it has is 98.
+[2026-04-18 14:32:31]: Peer 1002 received the 'not interested' message from 1001.
+[2026-04-18 14:32:31]: Peer 1002 has downloaded the piece 67 from 1001. Now the number of pieces it has is 99.
+[2026-04-18 14:32:31]: Peer 1002 received the 'not interested' message from 1001.
+[2026-04-18 14:32:31]: Peer 1002 has downloaded the piece 126 from 1001. Now the number of pieces it has is 100.
+[2026-04-18 14:32:31]: Peer 1002 received the 'not interested' message from 1001.
+[2026-04-18 14:32:31]: Peer 1002 has downloaded the piece 120 from 1001. Now the number of pieces it has is 101.
+[2026-04-18 14:32:31]: Peer 1002 received the 'not interested' message from 1001.
+[2026-04-18 14:32:31]: Peer 1002 has downloaded the piece 128 from 1001. Now the number of pieces it has is 102.
+[2026-04-18 14:32:31]: Peer 1002 received the 'not interested' message from 1001.
+[2026-04-18 14:32:31]: Peer 1002 has downloaded the piece 92 from 1001. Now the number of pieces it has is 103.
+[2026-04-18 14:32:31]: Peer 1002 received the 'not interested' message from 1001.
+[2026-04-18 14:32:31]: Peer 1002 has downloaded the piece 99 from 1001. Now the number of pieces it has is 104.
+[2026-04-18 14:32:31]: Peer 1002 received the 'not interested' message from 1001.
+[2026-04-18 14:32:31]: Peer 1002 has downloaded the piece 79 from 1001. Now the number of pieces it has is 105.
+[2026-04-18 14:32:31]: Peer 1002 received the 'not interested' message from 1001.
+[2026-04-18 14:32:31]: Peer 1002 has downloaded the piece 16 from 1001. Now the number of pieces it has is 106.
+[2026-04-18 14:32:31]: Peer 1002 received the 'not interested' message from 1001.
+[2026-04-18 14:32:31]: Peer 1002 has downloaded the piece 41 from 1001. Now the number of pieces it has is 107.
+[2026-04-18 14:32:31]: Peer 1002 received the 'not interested' message from 1001.
+[2026-04-18 14:32:31]: Peer 1002 has downloaded the piece 83 from 1001. Now the number of pieces it has is 108.
+[2026-04-18 14:32:31]: Peer 1002 received the 'not interested' message from 1001.
+[2026-04-18 14:32:31]: Peer 1002 has downloaded the piece 85 from 1001. Now the number of pieces it has is 109.
+[2026-04-18 14:32:31]: Peer 1002 received the 'not interested' message from 1001.
+[2026-04-18 14:32:31]: Peer 1002 has downloaded the piece 130 from 1001. Now the number of pieces it has is 110.
+[2026-04-18 14:32:31]: Peer 1002 received the 'not interested' message from 1001.
+[2026-04-18 14:32:31]: Peer 1002 has downloaded the piece 54 from 1001. Now the number of pieces it has is 111.
+[2026-04-18 14:32:31]: Peer 1002 received the 'not interested' message from 1001.
+[2026-04-18 14:32:31]: Peer 1002 has downloaded the piece 60 from 1001. Now the number of pieces it has is 112.
+[2026-04-18 14:32:31]: Peer 1002 received the 'not interested' message from 1001.
+[2026-04-18 14:32:31]: Peer 1002 has downloaded the piece 55 from 1001. Now the number of pieces it has is 113.
+[2026-04-18 14:32:31]: Peer 1002 received the 'not interested' message from 1001.
+[2026-04-18 14:32:31]: Peer 1002 has downloaded the piece 33 from 1001. Now the number of pieces it has is 114.
+[2026-04-18 14:32:31]: Peer 1002 received the 'not interested' message from 1001.
+[2026-04-18 14:32:31]: Peer 1002 has downloaded the piece 78 from 1001. Now the number of pieces it has is 115.
+[2026-04-18 14:32:31]: Peer 1002 received the 'not interested' message from 1001.
+[2026-04-18 14:32:31]: Peer 1002 has downloaded the piece 117 from 1001. Now the number of pieces it has is 116.
+[2026-04-18 14:32:31]: Peer 1002 received the 'not interested' message from 1001.
+[2026-04-18 14:32:31]: Peer 1002 has downloaded the piece 88 from 1001. Now the number of pieces it has is 117.
+[2026-04-18 14:32:31]: Peer 1002 received the 'not interested' message from 1001.
+[2026-04-18 14:32:31]: Peer 1002 has downloaded the piece 115 from 1001. Now the number of pieces it has is 118.
+[2026-04-18 14:32:31]: Peer 1002 received the 'not interested' message from 1001.
+[2026-04-18 14:32:31]: Peer 1002 has downloaded the piece 123 from 1001. Now the number of pieces it has is 119.
+[2026-04-18 14:32:31]: Peer 1002 received the 'not interested' message from 1001.
+[2026-04-18 14:32:31]: Peer 1002 has downloaded the piece 0 from 1001. Now the number of pieces it has is 120.
+[2026-04-18 14:32:31]: Peer 1002 received the 'not interested' message from 1001.
+[2026-04-18 14:32:31]: Peer 1002 has downloaded the piece 4 from 1001. Now the number of pieces it has is 121.
+[2026-04-18 14:32:31]: Peer 1002 received the 'not interested' message from 1001.
+[2026-04-18 14:32:31]: Peer 1002 has downloaded the piece 19 from 1001. Now the number of pieces it has is 122.
+[2026-04-18 14:32:31]: Peer 1002 received the 'not interested' message from 1001.
+[2026-04-18 14:32:31]: Peer 1002 has downloaded the piece 71 from 1001. Now the number of pieces it has is 123.
+[2026-04-18 14:32:31]: Peer 1002 received the 'not interested' message from 1001.
+[2026-04-18 14:32:31]: Peer 1002 has downloaded the piece 105 from 1001. Now the number of pieces it has is 124.
+[2026-04-18 14:32:31]: Peer 1002 received the 'not interested' message from 1001.
+[2026-04-18 14:32:31]: Peer 1002 has downloaded the piece 5 from 1001. Now the number of pieces it has is 125.
+[2026-04-18 14:32:31]: Peer 1002 received the 'not interested' message from 1001.
+[2026-04-18 14:32:31]: Peer 1002 has downloaded the piece 39 from 1001. Now the number of pieces it has is 126.
+[2026-04-18 14:32:31]: Peer 1002 received the 'not interested' message from 1001.
+[2026-04-18 14:32:31]: Peer 1002 has downloaded the piece 68 from 1001. Now the number of pieces it has is 127.
+[2026-04-18 14:32:31]: Peer 1002 received the 'not interested' message from 1001.
+[2026-04-18 14:32:31]: Peer 1002 has downloaded the piece 113 from 1001. Now the number of pieces it has is 128.
+[2026-04-18 14:32:31]: Peer 1002 received the 'not interested' message from 1001.
+[2026-04-18 14:32:31]: Peer 1002 has downloaded the piece 122 from 1001. Now the number of pieces it has is 129.
+[2026-04-18 14:32:31]: Peer 1002 received the 'not interested' message from 1001.
+[2026-04-18 14:32:31]: Peer 1002 has downloaded the piece 77 from 1001. Now the number of pieces it has is 130.
+[2026-04-18 14:32:31]: Peer 1002 received the 'not interested' message from 1001.
+[2026-04-18 14:32:31]: Peer 1002 has downloaded the piece 26 from 1001. Now the number of pieces it has is 131.
+[2026-04-18 14:32:31]: Peer 1002 received the 'not interested' message from 1001.
+[2026-04-18 14:32:31]: Peer 1002 has downloaded the piece 48 from 1001. Now the number of pieces it has is 132.
+[2026-04-18 14:32:31]: Peer 1002 received the 'not interested' message from 1001.
+[2026-04-18 14:32:31]: Peer 1002 has downloaded the piece 42 from 1001. Now the number of pieces it has is 133.
+[2026-04-18 14:32:31]: Peer 1002 has downloaded the complete file.
+[2026-04-18 14:32:31]: Peer 1002 received the 'not interested' message from 1001.
+[2026-04-18 14:32:35]: Peer 1002 is choked by 1001.
+[2026-04-18 14:32:35]: Error in handle_connection with 1001: [WinError 10054] An existing connection was forcibly closed by the remote host
+[2026-04-18 14:32:35]: Peer 1002 is terminating as all peers have completed.
+[2026-04-18 14:33:35]: Peer 1002 started listening on 6002...
+[2026-04-18 14:36:26]: Peer 1002 started listening on 6002...
+[2026-04-18 14:36:35]: Peer 1002 is connected from Peer 1003.
+[2026-04-18 14:36:35]: Peer 1002 received the 'not interested' message from 1003.
+[2026-04-18 14:39:19]: Peer 1002 listening on 6002
+[2026-04-18 14:43:41]: Peer 1002 listening on 6002
+[2026-04-18 14:43:48]: Preferred neighbors: []
+[2026-04-18 14:43:53]: Preferred neighbors: []
+[2026-04-18 14:43:58]: Preferred neighbors: []
+[2026-04-18 14:44:03]: Preferred neighbors: []
+[2026-04-18 14:44:08]: Preferred neighbors: []
+[2026-04-18 14:44:13]: Preferred neighbors: []
+[2026-04-18 14:44:14]: Peer 1002 failed to connect to 1001
+[2026-04-18 14:45:23]: Peer 1002 started listening on 6002...
+[2026-04-18 14:45:30]: Peer 1002 is connected from Peer 1003.
+[2026-04-18 14:48:28]: Peer 1002 listening on 6002
+[2026-04-18 14:48:31]: Connected to Peer 1001
+[2026-04-18 14:48:38]: Peer 1002 connected from Peer 1003
+[2026-04-18 15:01:40]: Peer 1002 listening on 6002
+[2026-04-18 15:01:42]: Connected to Peer 1001
+[2026-04-18 15:01:47]: Peer 1002 connected from Peer 1003
+[2026-04-18 15:04:26]: Peer 1002 listening on 6002
+[2026-04-18 15:04:29]: Connected to Peer 1001
+[2026-04-18 15:04:35]: Peer 1002 connected from Peer 1003
+[2026-04-18 15:10:24]: Peer 1002 listening on 6002
+[2026-04-18 15:10:26]: Connected to Peer 1001
+[2026-04-18 15:10:29]: Peer 1002 connected from Peer 1003
+[2026-04-18 15:17:21]: Peer 1002 listening on 6002
+[2026-04-18 15:17:23]: Connected to Peer 1001
+[2026-04-18 15:17:30]: Peer 1002 connected from Peer 1003
+[2026-04-18 15:23:04]: Peer 1002 listening on 6002
+[2026-04-18 15:23:06]: Connected to Peer 1001
+[2026-04-18 15:23:08]: Peer 1002 connected from Peer 1003
+[2026-04-18 15:28:29]: Peer 1002 listening on 6002
+[2026-04-18 15:34:20]: Peer 1002 listening on 6002
+[2026-04-18 15:34:24]: Received piece 95 from Peer 1001
+[2026-04-18 15:34:25]: Peer 1002 connected from Peer 1003
+[2026-04-18 15:34:26]: Received piece 50 from Peer 1001
+[2026-04-18 15:34:26]: Received piece 1 from Peer 1003
+[2026-04-18 15:34:28]: Received piece 97 from Peer 1001
+[2026-04-18 15:34:28]: Received piece 131 from Peer 1003
+[2026-04-18 15:34:30]: Received piece 84 from Peer 1003
+[2026-04-18 15:34:30]: Received piece 91 from Peer 1001
+[2026-04-18 15:34:32]: Received piece 124 from Peer 1001
+[2026-04-18 15:34:32]: Received piece 121 from Peer 1003
+[2026-04-18 15:34:34]: Received piece 12 from Peer 1003
+[2026-04-18 15:34:34]: Received piece 23 from Peer 1001
+[2026-04-18 15:34:36]: Received piece 101 from Peer 1003
+[2026-04-18 15:34:36]: Received piece 58 from Peer 1001
+[2026-04-18 15:34:38]: Received piece 125 from Peer 1003
+[2026-04-18 15:34:38]: Received piece 83 from Peer 1001
+[2026-04-18 15:34:40]: Received piece 40 from Peer 1001
+[2026-04-18 15:34:40]: Received piece 13 from Peer 1003
+[2026-04-18 15:34:42]: Received piece 48 from Peer 1001
+[2026-04-18 15:34:42]: Received piece 132 from Peer 1003
+[2026-04-18 15:34:44]: Received piece 77 from Peer 1001
+[2026-04-18 15:34:44]: Received piece 75 from Peer 1003
+[2026-04-18 15:34:46]: Received piece 88 from Peer 1001
+[2026-04-18 15:34:46]: Received piece 20 from Peer 1003
+[2026-04-18 15:34:48]: Received piece 56 from Peer 1001
+[2026-04-18 15:34:48]: Received piece 114 from Peer 1003
+[2026-04-18 15:34:50]: Received piece 14 from Peer 1001
+[2026-04-18 15:34:50]: Received piece 26 from Peer 1003
+[2026-04-18 15:34:52]: Received piece 35 from Peer 1001
+[2026-04-18 15:34:52]: Received piece 85 from Peer 1003
+[2026-04-18 15:34:54]: Received piece 15 from Peer 1001
+[2026-04-18 15:34:54]: Received piece 102 from Peer 1003
+[2026-04-18 15:36:36]: Peer 1002 listening on 6002
+[2026-04-18 15:36:44]: Peer 1002 connected from Peer 1003
+[2026-04-18 15:38:47]: Peer 1002 listening on 6002
+[2026-04-18 15:38:49]: Connected to Peer 1001
+[2026-04-18 15:40:26]: Peer 1002 listening on 6002
+[2026-04-18 15:40:30]: Received piece 82 from Peer 1001
+[2026-04-18 15:40:32]: Received piece 85 from Peer 1001
+[2026-04-18 15:40:33]: Peer 1002 connected from Peer 1003
+[2026-04-18 15:40:34]: Received piece 89 from Peer 1001
+[2026-04-18 15:40:34]: Received piece 76 from Peer 1003
+[2026-04-18 15:40:36]: Received piece 99 from Peer 1001
+[2026-04-18 15:40:36]: Received piece 16 from Peer 1003
+[2026-04-18 15:40:38]: Received piece 112 from Peer 1001
+[2026-04-18 15:40:38]: Received piece 24 from Peer 1003
+[2026-04-18 15:40:40]: Received piece 86 from Peer 1001
+[2026-04-18 15:40:40]: Received piece 18 from Peer 1003
+[2026-04-18 15:40:42]: Received piece 91 from Peer 1003
+[2026-04-18 15:40:42]: Received piece 36 from Peer 1001
+[2026-04-18 15:40:44]: Received piece 4 from Peer 1001
+[2026-04-18 15:40:44]: Received piece 39 from Peer 1003
+[2026-04-18 15:40:46]: Received piece 48 from Peer 1001
+[2026-04-18 15:40:46]: Received piece 58 from Peer 1003
+[2026-04-18 15:40:48]: Received piece 75 from Peer 1003
+[2026-04-18 15:40:48]: Received piece 30 from Peer 1001
+[2026-04-18 15:40:50]: Received piece 23 from Peer 1001
+[2026-04-18 15:40:50]: Received piece 118 from Peer 1003
+[2026-04-18 15:40:52]: Received piece 13 from Peer 1001
+[2026-04-18 15:40:52]: Received piece 107 from Peer 1003
+[2026-04-18 15:40:54]: Received piece 38 from Peer 1001
+[2026-04-18 15:40:54]: Received piece 46 from Peer 1003
+[2026-04-18 15:40:56]: Received piece 1 from Peer 1001
+[2026-04-18 15:40:56]: Received piece 55 from Peer 1003
+[2026-04-18 15:40:58]: Received piece 127 from Peer 1001
+[2026-04-18 15:40:58]: Received piece 65 from Peer 1003
+[2026-04-18 15:41:00]: Received piece 126 from Peer 1001
+[2026-04-18 15:41:00]: Received piece 79 from Peer 1003
+[2026-04-18 15:41:02]: Received piece 120 from Peer 1001
+[2026-04-18 15:41:02]: Received piece 131 from Peer 1003
+[2026-04-18 15:41:04]: Received piece 105 from Peer 1001
+[2026-04-18 15:41:04]: Received piece 81 from Peer 1003
+[2026-04-18 15:41:06]: Received piece 83 from Peer 1001
+[2026-04-18 15:41:06]: Received piece 41 from Peer 1003
+[2026-04-18 15:41:08]: Received piece 5 from Peer 1001
+[2026-04-18 15:41:08]: Received piece 51 from Peer 1003
+[2026-04-18 15:41:10]: Received piece 7 from Peer 1001
+[2026-04-18 15:41:10]: Received piece 117 from Peer 1003
+[2026-04-18 15:41:12]: Received piece 49 from Peer 1001
+[2026-04-18 15:41:12]: Received piece 74 from Peer 1003
+[2026-04-18 15:41:14]: Received piece 10 from Peer 1001
+[2026-04-18 15:41:14]: Received piece 104 from Peer 1003
+[2026-04-18 15:41:16]: Received piece 128 from Peer 1001
+[2026-04-18 15:41:16]: Received piece 2 from Peer 1003
+[2026-04-18 15:41:18]: Received piece 56 from Peer 1001
+[2026-04-18 15:41:18]: Received piece 69 from Peer 1003
+[2026-04-18 15:41:20]: Received piece 110 from Peer 1001
+[2026-04-18 15:41:20]: Received piece 50 from Peer 1003
+[2026-04-18 15:41:22]: Received piece 59 from Peer 1001
+[2026-04-18 15:41:22]: Received piece 32 from Peer 1003
+[2026-04-18 15:41:24]: Received piece 8 from Peer 1003
+[2026-04-18 15:41:24]: Received piece 98 from Peer 1001
+[2026-04-18 15:41:26]: Received piece 101 from Peer 1001
+[2026-04-18 15:41:26]: Received piece 9 from Peer 1003
+[2026-04-18 15:41:28]: Received piece 0 from Peer 1003
+[2026-04-18 15:41:28]: Received piece 96 from Peer 1001
+[2026-04-18 15:41:30]: Received piece 25 from Peer 1001
+[2026-04-18 15:41:30]: Received piece 62 from Peer 1003
+[2026-04-18 15:41:32]: Received piece 17 from Peer 1001
+[2026-04-18 15:41:32]: Received piece 102 from Peer 1003
+[2026-04-18 15:41:34]: Received piece 115 from Peer 1001
+[2026-04-18 15:41:34]: Received piece 88 from Peer 1003
+[2026-04-18 15:41:36]: Received piece 116 from Peer 1001
+[2026-04-18 15:41:36]: Received piece 35 from Peer 1003
+[2026-04-18 15:41:38]: Received piece 108 from Peer 1003
+[2026-04-18 15:41:38]: Received piece 34 from Peer 1001
+[2026-04-18 15:41:40]: Received piece 61 from Peer 1001
+[2026-04-18 15:41:40]: Received piece 6 from Peer 1003
+[2026-04-18 15:41:42]: Received piece 53 from Peer 1003
+[2026-04-18 15:41:42]: Received piece 84 from Peer 1001
+[2026-04-18 15:41:44]: Received piece 100 from Peer 1001
+[2026-04-18 15:41:44]: Received piece 130 from Peer 1003
+[2026-04-18 15:41:46]: Received piece 97 from Peer 1001
+[2026-04-18 15:41:46]: Received piece 125 from Peer 1003
+[2026-04-18 15:41:48]: Received piece 77 from Peer 1003
+[2026-04-18 15:41:48]: Received piece 28 from Peer 1001
+[2026-04-18 15:41:50]: Received piece 52 from Peer 1001
+[2026-04-18 15:41:50]: Received piece 95 from Peer 1003
+[2026-04-18 15:41:52]: Received piece 90 from Peer 1001
+[2026-04-18 15:41:52]: Received piece 124 from Peer 1003
+[2026-04-18 15:41:54]: Received piece 121 from Peer 1001
+[2026-04-18 15:41:54]: Received piece 40 from Peer 1003
+[2026-04-18 15:41:56]: Received piece 92 from Peer 1001
+[2026-04-18 15:41:56]: Received piece 21 from Peer 1003
+[2026-04-18 15:41:58]: Received piece 103 from Peer 1003
+[2026-04-18 15:41:58]: Received piece 70 from Peer 1001
+[2026-04-18 15:42:00]: Received piece 119 from Peer 1001
+[2026-04-18 15:42:00]: Received piece 29 from Peer 1003
+[2026-04-18 15:42:02]: Received piece 94 from Peer 1001
+[2026-04-18 15:42:02]: Received piece 54 from Peer 1003
+[2026-04-18 15:42:04]: Received piece 111 from Peer 1001
+[2026-04-18 15:42:04]: Received piece 106 from Peer 1003
+[2026-04-18 15:42:06]: Received piece 73 from Peer 1003
+[2026-04-18 15:42:06]: Received piece 123 from Peer 1001
+[2026-04-18 15:42:08]: Received piece 45 from Peer 1001
+[2026-04-18 15:42:08]: Received piece 42 from Peer 1003
+[2026-04-18 15:42:10]: Received piece 60 from Peer 1001
+[2026-04-18 15:42:10]: Received piece 113 from Peer 1003
+[2026-04-18 15:42:12]: Received piece 37 from Peer 1003
+[2026-04-18 15:42:12]: Received piece 71 from Peer 1001
+[2026-04-18 15:42:14]: Received piece 33 from Peer 1001
+[2026-04-18 15:42:14]: Received piece 11 from Peer 1003
+[2026-04-18 15:42:16]: Received piece 64 from Peer 1003
+[2026-04-18 15:42:16]: Received piece 12 from Peer 1001
+[2026-04-18 15:42:18]: Received piece 44 from Peer 1003
+[2026-04-18 15:42:18]: Received piece 63 from Peer 1001
+[2026-04-18 15:42:20]: Received piece 132 from Peer 1001
+[2026-04-18 15:42:20]: Received piece 57 from Peer 1003
+[2026-04-18 15:42:22]: Received piece 80 from Peer 1001
+[2026-04-18 15:42:22]: Received piece 68 from Peer 1003
+[2026-04-18 15:42:24]: Received piece 129 from Peer 1001
+[2026-04-18 15:42:24]: Received piece 114 from Peer 1003
+[2026-04-18 15:42:26]: Received piece 22 from Peer 1001
+[2026-04-18 15:42:26]: Received piece 14 from Peer 1003
+[2026-04-18 15:42:28]: Received piece 31 from Peer 1001
+[2026-04-18 15:42:28]: Received piece 27 from Peer 1003
+[2026-04-18 15:42:30]: Received piece 78 from Peer 1001
+[2026-04-18 15:42:30]: Received piece 78 from Peer 1003
+[2026-04-18 15:42:32]: Received piece 26 from Peer 1001
+[2026-04-18 15:42:32]: Received piece 47 from Peer 1003
+[2026-04-18 15:42:34]: Received piece 66 from Peer 1003
+[2026-04-18 15:42:34]: Received piece 66 from Peer 1001
+[2026-04-18 15:42:36]: Received piece 43 from Peer 1001
+[2026-04-18 15:42:36]: Received piece 67 from Peer 1003
+[2026-04-18 15:42:38]: Received piece 19 from Peer 1001
+[2026-04-18 15:42:38]: Received piece 3 from Peer 1003
+[2026-04-18 15:42:40]: Received piece 20 from Peer 1001
+[2026-04-18 15:42:40]: Received piece 93 from Peer 1003
+[2026-04-18 15:42:42]: Received piece 87 from Peer 1001
+[2026-04-18 15:42:42]: Received piece 87 from Peer 1003
+[2026-04-18 15:42:44]: Received piece 72 from Peer 1003
+[2026-04-18 15:42:44]: Received piece 15 from Peer 1001
+[2026-04-18 15:42:46]: Received piece 109 from Peer 1001
+[2026-04-18 15:42:46]: Received piece 109 from Peer 1003
+[2026-04-18 15:42:48]: Received piece 122 from Peer 1001
+[2026-04-18 15:42:48]: Received piece 122 from Peer 1003
+[2026-04-18 15:45:11]: Peer 1002 listening on 6002
+[2026-04-18 15:45:17]: Peer 1002 connected from Peer 1003
+[2026-04-18 15:47:40]: Peer 1002 listening on 6002
+[2026-04-18 15:47:44]: Peer 1002 connected from Peer 1003
+[2026-04-18 15:50:11]: Peer 1002 listening on 6002
+[2026-04-18 15:50:16]: Peer 1002 connected from Peer 1003
+[2026-04-18 15:54:29]: Peer 1002 listening on 6002
+[2026-04-18 15:54:36]: Peer 1002 connected from Peer 1003
+[2026-04-18 15:56:18]: Peer 1002 listening on 6002
+[2026-04-18 15:56:23]: Peer 1002 connected from Peer 1003
+[2026-04-18 15:58:34]: Peer 1002 listening on 6002
+[2026-04-18 15:58:37]: Received piece 59 from Peer 1001
+[2026-04-18 15:58:39]: Peer 1002 connected from Peer 1003
+[2026-04-18 15:58:40]: Received piece 76 from Peer 1003
+[2026-04-18 15:59:47]: Peer 1002 listening on 6002
+[2026-04-18 15:59:50]: Received piece 98 from Peer 1001
+[2026-04-18 15:59:51]: Received piece 19 from Peer 1001
+[2026-04-18 15:59:52]: Received piece 69 from Peer 1001
+[2026-04-18 15:59:53]: Received piece 11 from Peer 1001
+[2026-04-18 15:59:53]: Peer 1002 connected from Peer 1003
+[2026-04-18 16:05:40]: Peer 1002 listening on 6002
+[2026-04-18 16:06:11]: Peer 1002 listening on 6002
+[2026-04-18 16:06:14]: Received piece 19 from Peer 1001
+[2026-04-18 16:06:15]: Received piece 52 from Peer 1001
+[2026-04-18 16:06:16]: Received piece 59 from Peer 1001
+[2026-04-18 16:06:17]: Received piece 101 from Peer 1001
+[2026-04-18 16:06:18]: Peer 1002 connected from Peer 1003
+[2026-04-18 16:08:39]: Peer 1002 listening on 6002
+[2026-04-18 16:08:52]: Peer 1002 connected from Peer 1003
+[2026-04-18 16:18:58]: Peer 1002 listening on 6002
+[2026-04-18 16:19:08]: Peer 1002 connected from Peer 1003
+[2026-04-18 16:21:42]: Peer 1002 listening on 6002
+[2026-04-18 16:21:48]: Peer 1002 connected from Peer 1003
+[2026-04-18 16:22:47]: Peer 1002 listening on 6002
+[2026-04-18 16:22:51]: Received piece 14 from Peer 1001
+[2026-04-18 16:22:53]: Received piece 51 from Peer 1001
+[2026-04-18 16:22:55]: Peer 1002 connected from Peer 1003
+[2026-04-18 16:22:55]: Received piece 128 from Peer 1001
+[2026-04-18 16:22:55]: Received piece 86 from Peer 1003
+[2026-04-18 16:22:57]: Received piece 30 from Peer 1003
+[2026-04-18 16:22:57]: Received piece 111 from Peer 1001
+[2026-04-18 16:22:59]: Received piece 61 from Peer 1001
+[2026-04-18 16:22:59]: Received piece 131 from Peer 1003
+[2026-04-18 16:23:01]: Received piece 53 from Peer 1001
+[2026-04-18 16:23:01]: Received piece 15 from Peer 1003
+[2026-04-18 16:23:03]: Received piece 34 from Peer 1001
+[2026-04-18 16:23:03]: Received piece 66 from Peer 1003
+[2026-04-18 16:23:05]: Received piece 108 from Peer 1001
+[2026-04-18 16:23:05]: Received piece 74 from Peer 1003
+[2026-04-18 16:23:07]: Received piece 78 from Peer 1003
+[2026-04-18 16:23:07]: Received piece 129 from Peer 1001
+[2026-04-18 16:23:09]: Received piece 5 from Peer 1001
+[2026-04-18 16:23:09]: Received piece 89 from Peer 1003
+[2026-04-18 16:23:11]: Received piece 90 from Peer 1001
+[2026-04-18 16:23:11]: Received piece 29 from Peer 1003
+[2026-04-18 16:23:13]: Received piece 67 from Peer 1001
+[2026-04-18 16:23:13]: Received piece 36 from Peer 1003
+[2026-04-18 16:23:15]: Received piece 60 from Peer 1003
+[2026-04-18 16:23:15]: Received piece 46 from Peer 1001
+[2026-04-18 16:23:17]: Received piece 62 from Peer 1001
+[2026-04-18 16:23:17]: Received piece 23 from Peer 1003
+[2026-04-18 16:23:19]: Received piece 101 from Peer 1001
+[2026-04-18 16:23:19]: Received piece 76 from Peer 1003
+[2026-04-18 16:23:21]: Received piece 7 from Peer 1001
+[2026-04-18 16:23:21]: Received piece 92 from Peer 1003
+[2026-04-18 16:23:23]: Received piece 27 from Peer 1001
+[2026-04-18 16:23:23]: Received piece 45 from Peer 1003
+[2026-04-18 16:26:39]: Peer 1002 listening on 6002
+[2026-04-18 16:26:48]: Peer 1002 connected from Peer 1003
+[2026-04-18 16:29:13]: Peer 1002 listening on 6002
+[2026-04-18 16:29:23]: Peer 1002 connected from Peer 1003
+[2026-04-18 16:30:45]: Peer 1002 listening on 6002
+[2026-04-18 16:30:49]: Received piece 43 from Peer 1001
+[2026-04-18 16:30:50]: Peer 1002 connected from Peer 1003
+[2026-04-18 16:30:51]: Received piece 81 from Peer 1001
+[2026-04-18 16:30:51]: Received piece 52 from Peer 1003
+[2026-04-18 16:30:53]: Received piece 30 from Peer 1001
+[2026-04-18 16:30:53]: Received piece 37 from Peer 1003
+[2026-04-18 16:30:55]: Received piece 87 from Peer 1001
+[2026-04-18 16:30:55]: Received piece 14 from Peer 1003
+[2026-04-18 16:30:57]: Received piece 64 from Peer 1001
+[2026-04-18 16:30:57]: Received piece 6 from Peer 1003
+[2026-04-18 16:30:59]: Received piece 21 from Peer 1001
+[2026-04-18 16:30:59]: Received piece 70 from Peer 1003
+[2026-04-18 16:31:01]: Received piece 69 from Peer 1001
+[2026-04-18 16:31:01]: Received piece 7 from Peer 1003
+[2026-04-18 16:31:03]: Received piece 38 from Peer 1003
+[2026-04-18 16:31:03]: Received piece 105 from Peer 1001
+[2026-04-18 16:31:05]: Received piece 8 from Peer 1001
+[2026-04-18 16:31:05]: Received piece 39 from Peer 1003
+[2026-04-18 16:31:07]: Received piece 125 from Peer 1001
+[2026-04-18 16:31:07]: Received piece 71 from Peer 1003
+[2026-04-18 16:31:09]: Received piece 88 from Peer 1001
+[2026-04-18 16:31:09]: Received piece 22 from Peer 1003
+[2026-04-18 16:31:11]: Received piece 35 from Peer 1001
+[2026-04-18 16:31:11]: Received piece 85 from Peer 1003
+[2026-04-18 16:31:13]: Received piece 59 from Peer 1001
+[2026-04-18 16:31:13]: Received piece 10 from Peer 1003
+[2026-04-18 16:31:15]: Received piece 132 from Peer 1003
+[2026-04-18 16:31:15]: Received piece 83 from Peer 1001
+[2026-04-18 16:31:17]: Received piece 56 from Peer 1001
+[2026-04-18 16:31:17]: Received piece 97 from Peer 1003
+[2026-04-18 16:31:19]: Received piece 47 from Peer 1001
+[2026-04-18 16:31:19]: Received piece 20 from Peer 1003
+[2026-04-18 16:31:21]: Received piece 94 from Peer 1001
+[2026-04-18 16:31:21]: Received piece 55 from Peer 1003
+[2026-04-18 16:31:23]: Received piece 23 from Peer 1001
+[2026-04-18 16:31:23]: Received piece 128 from Peer 1003
+[2026-04-18 16:31:25]: Received piece 111 from Peer 1001
+[2026-04-18 16:31:25]: Received piece 25 from Peer 1003
+[2026-04-18 16:31:27]: Received piece 106 from Peer 1001
+[2026-04-18 16:31:27]: Received piece 115 from Peer 1003
+[2026-04-18 16:31:29]: Received piece 9 from Peer 1001
+[2026-04-18 16:31:29]: Received piece 54 from Peer 1003
+[2026-04-18 16:31:31]: Received piece 29 from Peer 1001
+[2026-04-18 16:31:31]: Received piece 4 from Peer 1003
+[2026-04-18 16:31:33]: Received piece 58 from Peer 1003
+[2026-04-18 16:31:33]: Received piece 103 from Peer 1001
+[2026-04-18 16:31:35]: Received piece 67 from Peer 1001
+[2026-04-18 16:31:35]: Received piece 98 from Peer 1003
+[2026-04-18 16:31:37]: Received piece 104 from Peer 1001
+[2026-04-18 16:31:37]: Received piece 27 from Peer 1003
+[2026-04-18 16:31:39]: Received piece 19 from Peer 1003
+[2026-04-18 16:31:39]: Received piece 129 from Peer 1001
+[2026-04-18 16:31:41]: Received piece 45 from Peer 1001
+[2026-04-18 16:31:41]: Received piece 48 from Peer 1003
+[2026-04-18 16:31:43]: Received piece 89 from Peer 1001
+[2026-04-18 16:31:43]: Received piece 123 from Peer 1003
+[2026-04-18 16:31:45]: Received piece 61 from Peer 1001
+[2026-04-18 16:31:45]: Received piece 34 from Peer 1003
+[2026-04-18 16:31:47]: Received piece 1 from Peer 1001
+[2026-04-18 16:31:47]: Received piece 99 from Peer 1003
+[2026-04-18 16:31:49]: Received piece 16 from Peer 1001
+[2026-04-18 16:31:49]: Received piece 51 from Peer 1003
+[2026-04-18 16:31:51]: Received piece 93 from Peer 1001
+[2026-04-18 16:31:51]: Received piece 112 from Peer 1003
+[2026-04-18 16:31:53]: Received piece 3 from Peer 1001
+[2026-04-18 16:31:53]: Received piece 63 from Peer 1003
+[2026-04-18 16:31:55]: Received piece 90 from Peer 1001
+[2026-04-18 16:31:55]: Received piece 36 from Peer 1003
+[2026-04-18 16:31:57]: Received piece 46 from Peer 1001
+[2026-04-18 16:31:57]: Received piece 116 from Peer 1003
+[2026-04-18 16:31:59]: Received piece 76 from Peer 1001
+[2026-04-18 16:31:59]: Received piece 17 from Peer 1003
+[2026-04-18 16:32:01]: Received piece 33 from Peer 1003
+[2026-04-18 16:32:01]: Received piece 95 from Peer 1001
+[2026-04-18 16:32:03]: Received piece 11 from Peer 1001
+[2026-04-18 16:32:03]: Received piece 96 from Peer 1003
+[2026-04-18 16:32:05]: Received piece 0 from Peer 1001
+[2026-04-18 16:32:05]: Received piece 13 from Peer 1003
+[2026-04-18 16:32:07]: Received piece 5 from Peer 1001
+[2026-04-18 16:32:07]: Received piece 32 from Peer 1003
+[2026-04-18 16:32:09]: Received piece 49 from Peer 1001
+[2026-04-18 16:32:09]: Received piece 15 from Peer 1003
+[2026-04-18 16:32:11]: Received piece 12 from Peer 1001
+[2026-04-18 16:32:11]: Received piece 57 from Peer 1003
+[2026-04-18 16:32:13]: Received piece 31 from Peer 1001
+[2026-04-18 16:32:13]: Received piece 24 from Peer 1003
+[2026-04-18 16:32:15]: Received piece 120 from Peer 1003
+[2026-04-18 16:32:15]: Received piece 82 from Peer 1001
+[2026-04-18 16:32:17]: Received piece 79 from Peer 1001
+[2026-04-18 16:32:17]: Received piece 124 from Peer 1003
+[2026-04-18 16:32:19]: Received piece 101 from Peer 1001
+[2026-04-18 16:32:19]: Received piece 65 from Peer 1003
+[2026-04-18 16:32:21]: Received piece 121 from Peer 1001
+[2026-04-18 16:32:21]: Received piece 78 from Peer 1003
+[2026-04-18 16:32:23]: Received piece 126 from Peer 1001
+[2026-04-18 16:32:23]: Received piece 107 from Peer 1003
+[2026-04-18 16:32:25]: Received piece 110 from Peer 1001
+[2026-04-18 16:32:25]: Received piece 130 from Peer 1003
+[2026-04-18 16:32:27]: Received piece 42 from Peer 1001
+[2026-04-18 16:32:27]: Received piece 50 from Peer 1003
+[2026-04-18 16:32:29]: Received piece 66 from Peer 1001
+[2026-04-18 16:32:29]: Received piece 62 from Peer 1003
+[2026-04-18 16:32:31]: Received piece 41 from Peer 1001
+[2026-04-18 16:32:31]: Received piece 100 from Peer 1003
+[2026-04-18 16:32:33]: Received piece 122 from Peer 1001
+[2026-04-18 16:32:33]: Received piece 68 from Peer 1003
+[2026-04-18 16:32:35]: Received piece 72 from Peer 1001
+[2026-04-18 16:32:35]: Received piece 92 from Peer 1003
+[2026-04-18 16:32:37]: Received piece 75 from Peer 1001
+[2026-04-18 16:32:37]: Received piece 60 from Peer 1003
+[2026-04-18 16:32:39]: Received piece 119 from Peer 1001
+[2026-04-18 16:32:41]: Received piece 2 from Peer 1001
+[2026-04-18 16:32:43]: Received piece 40 from Peer 1001
+[2026-04-18 16:32:45]: Received piece 18 from Peer 1001
+[2026-04-18 16:32:47]: Received piece 86 from Peer 1001
+[2026-04-18 16:32:49]: Received piece 91 from Peer 1001
+[2026-04-18 16:32:51]: Received piece 118 from Peer 1001
+[2026-04-18 16:32:53]: Received piece 113 from Peer 1001
+[2026-04-18 16:32:55]: Received piece 117 from Peer 1001
+[2026-04-18 16:32:57]: Received piece 77 from Peer 1001
+[2026-04-18 16:32:59]: Received piece 108 from Peer 1001
+[2026-04-18 16:33:01]: Received piece 84 from Peer 1001
+[2026-04-18 16:33:03]: Received piece 28 from Peer 1001
+[2026-04-18 16:33:05]: Received piece 53 from Peer 1001
+[2026-04-18 16:33:07]: Received piece 80 from Peer 1001
+[2026-04-18 16:33:09]: Received piece 44 from Peer 1001
+[2026-04-18 16:33:11]: Received piece 102 from Peer 1001
+[2026-04-18 16:33:13]: Received piece 114 from Peer 1001
+[2026-04-18 16:33:15]: Received piece 73 from Peer 1001
+[2026-04-18 16:33:17]: Received piece 26 from Peer 1001
+[2026-04-18 16:33:19]: Received piece 127 from Peer 1001
+[2026-04-18 16:33:21]: Received piece 74 from Peer 1001
+[2026-04-18 16:33:23]: Received piece 131 from Peer 1001
+[2026-04-18 16:33:25]: Received piece 109 from Peer 1001
+[2026-04-18 16:37:41]: Peer 1002 listening on 6002
+[2026-04-18 16:37:48]: Peer 1002 connected from Peer 1003
+[2026-04-18 16:39:02]: Peer 1002 listening on 6002
+[2026-04-18 16:39:09]: Peer 1002 connected from Peer 1003
+[2026-04-18 16:42:53]: Peer 1002 listening on 6002
+[2026-04-18 16:42:58]: Peer 1002 connected from Peer 1003
+[2026-04-18 16:43:31]: Peer 1002 listening on 6002
+[2026-04-18 16:43:35]: Received piece 55 from Peer 1001
+[2026-04-18 16:43:35]: Peer 1002 connected from Peer 1003
+[2026-04-18 16:43:37]: Received piece 126 from Peer 1001
+[2026-04-18 16:43:37]: Received piece 37 from Peer 1003
+[2026-04-18 16:43:39]: Received piece 118 from Peer 1001
+[2026-04-18 16:43:39]: Received piece 123 from Peer 1003
+[2026-04-18 16:43:41]: Received piece 100 from Peer 1001
+[2026-04-18 16:43:41]: Received piece 39 from Peer 1003
+[2026-04-18 16:43:43]: Received piece 88 from Peer 1001
+[2026-04-18 16:43:43]: Received piece 113 from Peer 1003
+[2026-04-18 16:43:45]: Received piece 41 from Peer 1001
+[2026-04-18 16:43:45]: Received piece 41 from Peer 1003
+[2026-04-18 16:43:47]: Received piece 80 from Peer 1001
