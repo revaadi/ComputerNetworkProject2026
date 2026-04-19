@@ -111,8 +111,11 @@ def write_piece_to_file(peer_id, piece_index, data, filename, piece_size):
 def all_peers_complete(tracker, conn_manager):
     if not tracker.file_complete():
         return False
-    
+
     with conn_manager.lock:
+        if len(conn_manager.peers) == 0:
+            return False
+
         for state in conn_manager.peers.values():
             if state.get("state") not in (PeerState.COMPLETED, PeerState.DISCONNECTED):
                 if not state.get("neighbor_complete", False):
@@ -172,7 +175,6 @@ def handle_connection(connection, my_id, tracker, logger, common, conn_manager, 
             if msg_type == ProtocolMessage.TYPE_CHOKE:
                 conn_manager.set_choking_me(peer_id, True)
                 conn_manager.set_state(peer_id, PeerState.CHOKED)
-                tracker.reset_requested_pieces()   # <-- ADD THIS LINE
                 logger.info(f"Peer {my_id} is choked by {peer_id}.")
 
             elif msg_type == ProtocolMessage.TYPE_UNCHOKE:
@@ -183,8 +185,7 @@ def handle_connection(connection, my_id, tracker, logger, common, conn_manager, 
                 if neighbor_bitfield is not None:
                     piece = tracker.pick_from_neighbor(neighbor_bitfield)
                     
-
-                    if piece is not None:
+                    if piece is not None and piece not in tracker.requested_pieces:
                         tracker.add_requested(piece)
                         connection.sendall(ProtocolMessage.request(piece))
 
@@ -198,16 +199,14 @@ def handle_connection(connection, my_id, tracker, logger, common, conn_manager, 
 
             elif msg_type == ProtocolMessage.TYPE_BITFIELD:
                 neighbor_bitfield = tracker.decode_bitfield(payload)
-                print("DEBUG BITFIELD: decoded =", neighbor_bitfield)
                 
                 if tracker.interested_in(neighbor_bitfield):
                     connection.sendall(ProtocolMessage.interested())
 
-                    # NEW: If already unchoked, immediately request
+                    # If already unchoked, immediately request
                     if conn_manager.get_state(peer_id) == PeerState.UNCHOKED:
                         piece = tracker.pick_from_neighbor(neighbor_bitfield)
-                        print("DEBUG BITFIELD: picked piece =", piece)
-                        if piece is not None:
+                        if piece is not None and piece not in tracker.requested_pieces:
                             tracker.add_requested(piece)
                             connection.sendall(ProtocolMessage.request(piece))
                 else:
@@ -221,14 +220,21 @@ def handle_connection(connection, my_id, tracker, logger, common, conn_manager, 
                     neighbor_bitfield = [0] * common["TotalPieces"]
                     
                 neighbor_bitfield[piece_index] = 1
+                
                 # If neighbor now has all pieces, mark them complete
                 if all(neighbor_bitfield):
                     conn_manager.mark_completed(peer_id)
                     logger.info(f"Peer {peer_id} has downloaded the complete file.")
             
-                
                 if tracker.interested_in(neighbor_bitfield):
                     connection.sendall(ProtocolMessage.interested())
+                    
+                    # If unchoked, request the new piece immediately
+                    if conn_manager.get_state(peer_id) == PeerState.UNCHOKED:
+                        next_piece = tracker.pick_from_neighbor(neighbor_bitfield)
+                        if next_piece is not None and next_piece not in tracker.requested_pieces:
+                            tracker.add_requested(next_piece)
+                            connection.sendall(ProtocolMessage.request(next_piece))
                 else:
                     connection.sendall(ProtocolMessage.not_interested())
 
@@ -270,7 +276,7 @@ def handle_connection(connection, my_id, tracker, logger, common, conn_manager, 
                 if neighbor_bitfield is not None:
                     if tracker.interested_in(neighbor_bitfield):
                         next_piece = tracker.pick_from_neighbor(neighbor_bitfield)
-                        if next_piece is not None:
+                        if next_piece is not None and next_piece not in tracker.requested_pieces:
                             tracker.add_requested(next_piece)
                             connection.sendall(ProtocolMessage.request(next_piece))
                     else:
@@ -340,7 +346,7 @@ def preferred_neighbors_timer(my_id, common, conn_manager, logger, tracker):
                             state["connection"].sendall(ProtocolMessage.choke())
                         except Exception:
                             pass
-        # NEW: Check global completion periodically
+
         if all_peers_complete(tracker, conn_manager):
             logger.info(f"Peer {my_id} is terminating as all peers have completed.")
             os._exit(0)
