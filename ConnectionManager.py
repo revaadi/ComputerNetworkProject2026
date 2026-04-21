@@ -19,30 +19,41 @@ class ConnectionManager:
         with self.lock:
             self.peers[peer_id] = {
                 "connection": connection,
+                "send_lock": threading.Lock(),
                 "state": PeerState.CONNECTED,
                 "choked_by_me": True,
                 "choking_me": True,
                 "interested_in_me": False,
                 "download_bytes": 0,
-                "neighbor_complete": False
+                "neighbor_complete": False,
+                "pending_request": None,
+                "bitfield": None
             }
+
+    def send_message(self, peer_id, message_bytes):
+        with self.lock:
+            if peer_id not in self.peers:
+                return
+            peer_data = self.peers[peer_id]
+        
+        with peer_data["send_lock"]:
+            try:
+                peer_data["connection"].sendall(message_bytes)
+            except Exception:
+                pass
+
+    def broadcast(self, message_bytes):
+        with self.lock:
+            peer_ids = list(self.peers.keys())
+        for pid in peer_ids:
+            self.send_message(pid, message_bytes)
 
     def remove_connection(self, peer_id):
         with self.lock:
             if peer_id in self.peers:
                 del self.peers[peer_id]
 
-    def broadcast(self, message_bytes):
-        """Sends a message to all connected peers (used for 'have' messages)."""
-        with self.lock:
-            for peer_id, state in self.peers.items():
-                try:
-                    state["connection"].sendall(message_bytes)
-                except Exception:
-                    pass
-
     def record_download(self, peer_id, num_bytes):
-        """Records bytes downloaded from a peer to calculate rates for the timer."""
         with self.lock:
             if peer_id in self.peers:
                 self.peers[peer_id]["download_bytes"] += num_bytes
@@ -58,12 +69,10 @@ class ConnectionManager:
                 self.peers[peer_id]["choking_me"] = is_choking
 
     def get_interested_peers(self):
-        """Returns a list of peer IDs that are currently interested in my data."""
         with self.lock:
             return [pid for pid, state in self.peers.items() if state["interested_in_me"]]
 
     def get_and_reset_download_rates(self):
-        """Returns current download bytes for all peers and resets counters to 0 for the next interval."""
         rates = {}
         with self.lock:
             for peer_id, state in self.peers.items():
@@ -92,3 +101,25 @@ class ConnectionManager:
         with self.lock:
             if peer_id in self.peers:
                 self.peers[peer_id]["state"] = PeerState.DISCONNECTED
+
+    def get_pending_request(self, peer_id):
+        with self.lock:
+            if peer_id in self.peers:
+                return self.peers[peer_id]["pending_request"]
+        return None
+        
+    def set_pending_request(self, peer_id, piece_index):
+        with self.lock:
+            if peer_id in self.peers:
+                self.peers[peer_id]["pending_request"] = piece_index
+
+    def get_bitfield(self, peer_id):
+        with self.lock:
+            if peer_id in self.peers:
+                return self.peers[peer_id]["bitfield"]
+        return None
+        
+    def set_bitfield(self, peer_id, bitfield):
+        with self.lock:
+            if peer_id in self.peers:
+                self.peers[peer_id]["bitfield"] = bitfield
