@@ -290,7 +290,7 @@ def handle_connection(connection, my_id, tracker, logger, common, conn_manager, 
 
   
     conn_manager.mark_disconnected(peer_id)
-    conn_manager.remove_connection(peer_id)
+    #conn_manager.remove_connection(peer_id)
     connection.close()
 
     if all_peers_complete(tracker, conn_manager):
